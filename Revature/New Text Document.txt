@@ -1,0 +1,357 @@
+package collections;
+
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+//Collections
+public class BinarySearch {
+
+	public static void main(String[] args) {
+		List<String> names = new LinkedList<String>();
+		names.add("Neha");
+		names.add("Rahul");
+		names.add("Mohan");
+		names.add("Pooja");
+		names.add("Arun");
+		names.add("Ravi");
+		
+		Collections.sort(names);
+		
+		System.out.println(names);
+		
+		int result = Collections.binarySearch(names, "Pooja");
+
+		System.out.println(result);
+		
+
+	}
+}
+
+----------------------------
+//Arrays class
+package collections;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class ArraysDemo {
+
+	public static void main(String[] args) {
+		
+		List products = Arrays.asList( new Product(1, "Lakme", 11, 12));
+		
+		
+		System.out.println(products);
+	}
+}
+
+-----------------------------Nested class
+
+Class within class
+package nestedclasses;
+
+interface Music {
+	void play();
+}
+
+class ChangePassword {
+
+	String password;
+	static int passwordExpired = 12;
+
+	// inner classes
+	public class EncyrptPassword {
+		public void ePassword() {
+			password = "some@123";
+
+			System.out.println("Password is :" + password);
+			System.out.println("Password Expired is :" + passwordExpired);
+		}
+	}
+
+	// static inner classes
+	static class HashingTechnique {
+
+	}
+
+	public void readPassword() {
+		// local class
+		class Pwd {
+
+		}
+	}
+}
+
+public class DemoNested {
+
+	public static void main(String[] args) {
+		ChangePassword p = new ChangePassword();
+
+		ChangePassword.EncyrptPassword encyrptPassword = p.new EncyrptPassword();
+		encyrptPassword.ePassword();
+
+		Music m = new Music() 
+		//anonymous classes in java
+				{
+
+			@Override
+			public void play() {
+				System.out.println("sound and music comes");
+
+			}
+
+		};
+		
+		m.play();
+	}
+}
+
+
+--------------
+package nestedclasses;
+
+abstract class Animal{
+	abstract void eat();
+}
+public class DemoAnoClasses {
+
+	public static void main(String[] args) {
+		Animal a = new Animal() {
+			
+			@Override
+			void eat() {
+				System.out.println("Tiger eats meat");
+				
+			}
+		};
+		
+		a.eat();
+	}
+}
+
+
+
+-----------------Comparator and Comparable
+
+
+package collections;
+
+public class Product implements Comparable<Product> {
+	// all the properties must always be private
+	private int productId;
+	private String productName;
+	private int quantityOnHand;
+	private int price;
+
+	public Product() {
+
+	}
+
+	public Product(int productId, String productName, int quantityOnHand, int price) {
+		this.productId = productId;
+		this.productName = productName;
+		this.quantityOnHand = quantityOnHand;
+		this.price = price;
+	}
+
+	public String getProductName() {
+		return productName;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+
+	public int getQuantityOnHand() {
+		return quantityOnHand;
+	}
+
+	public void setQuantityOnHand(int quantityOnHand) {
+		this.quantityOnHand = quantityOnHand;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
+	public int getProductId() {
+		return productId;
+	}
+
+	@Override
+	public String toString() {
+		return "Product [productId=" + productId + ", productName=" + productName + ", quantityOnHand=" + quantityOnHand
+				+ ", price=" + price + "]";
+	}
+
+	@Override
+	public int compareTo(Product o) {
+
+		if (o.getPrice() > this.getPrice())
+			return 1;
+		else
+			return -1;
+	}
+
+}
+
+
+-----
+package collections;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.List;
+
+public class ArrayListStoringObject {
+	public static void main(String[] args) {
+
+		Product product1 = new Product(1,"Lakme",19,900);
+		
+		
+		
+		System.out.println(product1.getPrice());
+		product1.setPrice(999);
+	
+		
+		List<Product> products = new ArrayList<Product>();
+		
+		products.add(product1);
+		products.add(new Product(2, "Aroma", 500, 699));
+		products.add(new Product(3, "Sunscreen", 1, 23));
+		products.add(new Product(4, "Olay", 33, 55));
+		products.add(new Product(5, "FairAndhandsome", 23, 33));
+
+		
+
+		Iterator<Product> iterator = products.iterator();
+		System.out.println("Initial product data : ");
+		while(iterator.hasNext())
+		{
+			
+			Product temp = iterator.next();
+			System.out.println(temp);
+		}
+		
+		//Sort by price
+		Collections.sort(products);
+		System.out.println("1. After sorting by price - Comparable");
+		Iterator<Product> iterator1 = products.iterator();
+		while(iterator1.hasNext())
+		{
+			
+			Product temp = iterator1.next();
+			System.out.println(temp);
+		}
+		
+		
+		//Sort by QOH
+		Collections.sort(products , new QOHComprator());
+		System.out.println("2. After sorting by QOH - Comparator");
+		Iterator<Product> iterator2 = products.iterator();
+		while(iterator2.hasNext())
+		{
+			
+			Product temp = iterator2.next();
+			System.out.println(temp);
+		}
+		
+		//Sort by Name using anonymous inner classes
+		Collections.sort(products , new Comparator<Product>() {
+
+			@Override
+			public int compare(Product o1, Product o2) {
+				
+				if( o1.getProductName().compareTo(o2.getProductName()) > 0)
+				return 1;
+				else
+					return -1;
+			}
+		});
+		System.out.println("3. After sorting by NAME - Anonymous inner classes");
+		Iterator<Product> iterator3 = products.iterator();
+		while(iterator3.hasNext())
+		{
+			
+			Product temp = iterator3.next();
+			System.out.println(temp);
+		}
+		
+		
+	}
+}
+
+
+-------------
+
+package collections;
+
+import java.util.Comparator;
+
+public class QOHComprator implements Comparator<Product> {
+
+	@Override
+	public int compare(Product o1, Product o2) {
+		if (o1.getQuantityOnHand() > o2.getQuantityOnHand())
+			return 1;
+		else
+			return -1;
+	}
+
+}
+
+
+----------------
+package threaddemos;
+
+class WelcomeGuest {
+
+	// thread safe --sync
+	public static synchronized void printMessage(String firstName, String lastName) {
+		System.out.println("Welcome to Taj Hotel");
+		System.out.println("Mr/Ms. " + firstName);
+		// storing the data in db
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		System.out.println(lastName);
+		System.out.println("Thanks for visiting my hotel , "+firstName);
+
+	}
+}
+class Hotel extends Thread {
+	String fn, ln;
+
+	public Hotel() {
+	}
+
+	public Hotel(String fn, String ln) {
+		this.fn = fn;
+		this.ln = ln;
+	}
+
+	@Override
+	public void run() {
+		WelcomeGuest.printMessage(fn, ln);
+	}
+}
+public class SyncDemo {
+
+	public static void main(String[] args) {
+
+		Hotel hotel1 = new Hotel("Tufail", "Ahmed");
+		hotel1.start();
+		Hotel hotel2 = new Hotel("Neha", "Agrawal");
+		hotel2.start();
+		Hotel hotel3 = new Hotel("Ravi", "Saxena");
+		hotel3.start();
+	}
+}

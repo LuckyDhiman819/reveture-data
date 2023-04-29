@@ -1,0 +1,189 @@
+package com.revature.pms.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.revature.pms.model.Product;
+import com.revature.pms.util.DBConn;
+
+public class ProductDaoHibernate implements ProductDaoDeclare {
+
+	Connection connection = DBConn.getDBConnection();
+	
+	private final String add_Product_Query = "insert into hr.products values(?,?,?,?,?);";
+	private final String update_Product_Query = "update hr.products set productName = ?, quantityOnHand = ?, price = ?, review = ? where productId = ?";
+	private final String delete_Product_Query = "delete from hr.products where productId = ?;";
+	
+	private final String find_ALL_Product_Query = "select * from hr.products;";
+	private final String find_Product_ID_Query = "select * from hr.products where productId = ?;";
+	private final String find_Product_Name_Query = "select * from hr.products where productName = ?;";
+	
+	public boolean addProduct(Product product) {
+		int res = 0;
+		try {
+			PreparedStatement statement = connection.prepareStatement(add_Product_Query);
+			statement.setInt(1, product.getProductId());
+			statement.setString(2, product.getProductName());
+			statement.setInt(3, product.getQuantityOnHand());
+			statement.setInt(4, product.getPrice());
+			statement.setString(5, product.getReview());
+			
+			res = statement.executeUpdate();
+			if(res==0) {
+				return false;
+			}else {
+				return true;
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return false;
+	}
+
+	public boolean deleteProduct(int productId) {
+		int res = 0;
+		try {
+			PreparedStatement statement = connection.prepareStatement(delete_Product_Query);
+			statement.setInt(1, productId);
+			
+			res = statement.executeUpdate();
+			if(res==0) {
+				return false;
+			}
+			else { 
+				return true;
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		return false;
+	}
+
+	public boolean updateProduct(Product product) {
+		int res = 0;
+		try {
+			PreparedStatement statement = connection.prepareStatement(update_Product_Query);
+			statement.setInt(5, product.getProductId());
+			statement.setString(1, product.getProductName());
+			statement.setInt(2, product.getQuantityOnHand());
+			statement.setInt(3, product.getPrice());
+			statement.setString(4, product.getReview());
+			
+			res = statement.executeUpdate();
+			if(res==0) {
+				return false;
+			}else {
+				return true;
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return false;
+	}
+
+	public Product getProductId(int productId) {
+
+		Product product = new Product();
+		ResultSet res = null;
+		
+		try {
+			PreparedStatement statement = connection.prepareStatement(find_Product_ID_Query);
+			statement.setInt(1, productId);
+			res = statement.executeQuery();
+			res.next();
+			product.setProductId(res.getInt(1));
+			product.setProductName(res.getString(2));
+			product.setQuantityOnHand(res.getInt(3));
+			product.setPrice(res.getInt(4));
+			product.setReview(res.getString(5));
+			
+			return product;
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+
+	public List<Product> getProductByName(String productName) {
+		List<Product> products = new ArrayList<Product>();
+		ResultSet res = null;
+		try {
+			PreparedStatement statement = connection.prepareStatement(find_Product_Name_Query);
+			statement.setString(1, productName);
+			res = statement.executeQuery();
+			while(res.next()) {
+				Product product = new Product();
+				product.setProductId(res.getInt(1));
+				product.setProductName(res.getString(2));
+				product.setQuantityOnHand(res.getInt(3));
+				product.setPrice(res.getInt(4));
+				product.setReview(res.getString(5));
+				
+				products.add(product);
+				
+			}
+			return products;			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		return null;
+	}
+
+	public List<Product> getAllProduct() {
+		ResultSet res = null;
+		List<Product> products = new ArrayList<Product>();
+		try {
+			Statement statement = connection.createStatement();
+			
+			res = statement.executeQuery(find_ALL_Product_Query);
+			
+			while(res.next()) {
+				Product product = new Product();
+				product.setProductId(res.getInt(1));
+				product.setProductName(res.getString(2));
+				product.setQuantityOnHand(res.getInt(3));
+				product.setPrice(res.getInt(4));
+				product.setReview(res.getString(5));
+				
+				products.add(product);		
+				
+				
+			}
+			return products;
+			
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		return null;
+	}
+	
+	
+
+}

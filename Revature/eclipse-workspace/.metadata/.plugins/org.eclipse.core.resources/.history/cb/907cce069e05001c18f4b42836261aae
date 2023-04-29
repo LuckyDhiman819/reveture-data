@@ -1,0 +1,29 @@
+package com.revature.training.controller;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.revature.training.model.Product;
+
+@RestController
+@RequestMapping("product")
+public class ProductController {
+	
+	@GetMapping
+	public List<Product> getProduct(){
+		System.out.println("All Products Details....");
+		return null;	
+	}
+	@PostMapping
+	public String setProduct(@RequestBody Product product){
+		System.out.println("All Products Called....");
+		System.out.println(product);
+		return null;	
+	}
+	
+}

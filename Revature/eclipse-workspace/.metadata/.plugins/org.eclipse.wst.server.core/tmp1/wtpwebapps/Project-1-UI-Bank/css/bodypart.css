@@ -1,0 +1,57 @@
+a{
+    text-decoration:none;
+    border:none;
+    color:navy;
+    /* padding:1px; */
+  }
+  a:hover{
+      color: yellow;
+  }
+  body{
+      background-color: gray;
+      
+  }
+  body{
+  border:dashed;
+  /* border-width:10px; */
+  border-radius: 70px;
+  margin: 40px;
+  margin-left:200px;
+  margin-right:200px;/*
+  margin-bottom:50px;
+  margin-top:30x; */
+  padding :50px;
+  /* padding-left: 10px; */
+  background-color:rgb(143, 169, 208);
+  /* background-image: url("C:\Users\Lenovo\Downloads\background1.JPG"); */
+  background-image: linear-gradient(to right, blue , rgb(0, 255, 187));
+  }
+  .int{
+      border: none;
+      background: transparent;
+      outline: none;
+  }
+  .int:onclick{
+      border: none;
+      background: transparent;
+      outline: none;
+  }
+  .btn{
+      cursor: pointer;
+      color: white;
+      font-size: 20px;
+      border-radius: 20px;
+      padding: 5px 20px;
+      outline: none;
+      margin: 10px;
+      font-weight: bold;
+      /* background-color: wheat; */
+      background: none;
+      border-color: whitesmoke;
+      font-family: 'Piedra', cursive;
+  }
+  .btn:hover{
+      background-color: black;
+      text-decoration: underline;
+      color: green;
+  }

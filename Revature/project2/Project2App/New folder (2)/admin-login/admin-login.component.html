@@ -1,0 +1,34 @@
+<app-navbar></app-navbar>
+<div class="loginForm">
+    <form novalidate [formGroup]="adminLoginForm" (ngSubmit)="adminLogin()">
+        <fieldset>
+
+            <div class="container">
+                <h1>LOG In</h1>
+                <div class="box">
+                    <i class="fa fa-user"></i>
+                    <input type="number" name="adminId" id="adminId" placeholder="Entre Your id" formControlName="adminId">
+                    <div class="alert alert-danger" *ngIf="adminLoginForm.get('adminId').hasError('required') &&
+                   adminLoginForm.get('adminId').dirty">
+                        Id is Required
+                    </div>
+                    <!-- <hr> -->
+                </div>
+                <div class="box">
+                    <i class="fa fa-key"></i>
+                    <input type="password" name="password" id="password" placeholder="Entre Your Password"
+                        formControlName="password">
+                    <div class="alert alert-danger" *ngIf="adminLoginForm.get('password').hasError('required') &&
+                   adminLoginForm.get('password').dirty">
+                        Password is Required
+                    </div>
+                    <!-- <hr> -->
+                </div>
+                <button type="submit" class="btn" (click) = "login()">Login</button>
+                <button class="btn" (click) = "sign_up()">Sign-Up</button>
+                <button class="btn" (click) = "back()">Back</button>
+            </div>
+        </fieldset>
+    </form>
+
+</div>

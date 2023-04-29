@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;EmployeeForm.jsp&apos; to &apos;pages&apos;" description="Move &apos;EmployeeForm.jsp&apos; to &apos;pages&apos;" destination="src/main/webapp/WEB-INF/pages" element1="src/main/webapp/EmployeeForm.jsp" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1629870116344" updateReferences="true"/>
+</session>

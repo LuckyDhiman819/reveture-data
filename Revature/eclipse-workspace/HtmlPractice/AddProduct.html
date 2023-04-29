@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Add Product</title>
+	<link rel="stylesheet" href="styles.css">
+	<style>
+		input[type=button],
+		input[type=submit],
+		input[type=reset] {
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			padding: 16px 32px;
+			text-decoration: none;
+			margin: 4px 2px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body bgcolor="grey" text="lightblue">
+	<div align="center">
+		<h2>Enter the product Details</h2>
+		<form action="success.html" onsubmit="return validate5()" id="myform">
+			<table cellSpacing="10" cellpandding="10">
+				<tr>
+					<td>Product Id:</td>
+					<td><input type="text" name="productid" id="" productid"></td>
+				</tr>
+				<tr>
+				<tr>
+					<td>Product Name:</td>
+					<td><input type="text" name="name" id="name"></td>
+				</tr>
+				<tr>
+				<tr>
+					<td>Quantity:</td>
+					<td><input type="number" name="quantity" id="quantity"></td>
+				</tr>
+				<tr>
+				<tr>
+				<tr>
+					<td>Price:</td>
+					<td><input type="number" name="price" id="price"></td>
+				</tr>
+				<tr>
+				<tr>
+					<td>Comments : </td>
+					<td>
+						<select name="comments" id="comments">
+							<option>Excellent</option>
+							<option selected="selected">Best</option>
+							<option>Very Good</option>
+							<option>Good</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="SignUp"> </td>
+					<td><input type="reset" value="Clear"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<h6><a href="home.html">HOME</a></h6>
+</body>
+
+</html>

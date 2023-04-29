@@ -1,0 +1,10 @@
+package com.reature.ems.dao;
+
+public interface StockImp {
+	
+	public void beforeAddStock(int amount);
+	public void afterRemoveStock(int amount);
+	public void removeAgain(int amount);
+	public void AddStock(int amount);
+
+}

@@ -1,0 +1,16 @@
+Medicines page
+
+
+Forget Password page (Id, PhoneNumbe, New_pass, Confirm_pass)
+addDoctorForm()
+listDoctor()
+deleteDoctor()
+listAdmins()
+listPatients()
+
+
+
+patientService
+viewProfile()
+viewAppointmnetHistory()
+viewAdmitHistory()

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Project-1-UI-Bank/kafil.log&apos; to &apos;Lucky.log&apos;" description="Rename resource &apos;kafil.log&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="kafil.log" name="Lucky.log" stamp="1629282769152" updateReferences="true"/>
+</session>

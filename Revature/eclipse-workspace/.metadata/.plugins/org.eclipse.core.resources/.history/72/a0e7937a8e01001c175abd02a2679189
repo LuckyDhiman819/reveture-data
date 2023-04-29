@@ -1,0 +1,22 @@
+package com.reature.ems.model;
+
+public class Email {
+	
+	private String to;
+	private String From;
+	private String subject;
+	private String body;
+	
+	
+	public Email(String to, String from, String subject, String body) {
+		super();
+		this.to = to;
+		From = from;
+		this.subject = subject;
+		this.body = body;
+	}
+	
+	
+	
+	
+}

@@ -1,0 +1,117 @@
+Patient Onboarding - Angular/Spring
+Allow patients to submit and update patient information
+and store it securely making on- boarding faster and reliable.
+
+Define the desired capabilities (i.e. requirements) of this portal.
+
+The requirements should be ideally expressed from the perspective of a patient who wants to visit the hospital/clinic for consultation and/or procedure. 
+
+You can choose a general practitioner or dental practice or eye clinic or any other. 
+
+Patient onboarding regulations should be researched and built into the application.
+
+
+Angular(5)
+
+//Hibernate(4)
+
+//Spring(4)
+
+////Core Java(6)
+
+Microservices(6) 
+
+
+
+==========================================================
+Pseudo code
+----------------------------------------------------------
+		 
+		
+Home Page
+	navigation baar
+	Home page have different nav bar
+		options 
+			sign in // right side
+			sign up // right side
+				
+			Home
+			diseases
+				// cancer
+					// list of doctor
+				// heart atteck
+					// list of doctor	
+				// illness
+					// list of doctor
+
+			hostpital //Details// add facility, benifits, 
+			Availability of beds & ICU
+			Help // contact us! // Emails id
+		// Discount on medicine
+					
+
+
+
+
+	//deatils//
+
+
+login page
+
+	patient login
+
+		email Id input
+		password input
+		ligin button
+
+	forget password //button
+		//input
+		router Link
+
+	sign up //button
+		////input
+		router link
+
+
+After Patient Login
+	welcome to //Login Name// Patient Home
+	                  //search field on right side// check for bed availbilty/ICU
+	Appoinments
+		take 	
+			// diseses
+				//cancer 
+					//Availability of doctor.
+						//Select that Doctor
+							//another date d time we have another time and date if its on that date
+						/comments/ Admin will decide and approve the appointment /comments/ --- admin
+		cheak appointment details
+		check appointment status approved or not
+		Medical History
+			--Reports
+		Bill 
+
+
+
+//
+//
+//
+//
+//
+
+
+home
+
+login
+
+
+backend   frontend
+
+
+
+			
+
+			
+
+
+
+

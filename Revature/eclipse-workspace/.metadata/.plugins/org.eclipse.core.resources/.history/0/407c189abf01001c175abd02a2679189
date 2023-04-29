@@ -1,0 +1,46 @@
+package com.revature.ems.configuration;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import com.reature.ems.model.Body;
+
+import com.reature.ems.model.Email;
+
+import com.reature.ems.model.From;
+import com.reature.ems.model.Subject;
+import com.reature.ems.model.To;
+
+@Configuration
+public class AppConfig {
+	
+	
+	@Bean(name = "email")
+	public Email getEmail() {
+		return new Email();
+	}
+	
+	@Bean(name = "email1")
+	public To getTo() {
+		return new To("Lucky", "luckydhiman@gmail.com");
+	}
+	
+	@Bean(name = "email1")
+	public From getFrom() {
+		return new From("dhiman", "dhiman@123");
+	}
+	
+	@Bean(name = "email1")
+	public Subject getSubject() {
+		return new Subject("Subject is Subject");
+	}
+	
+	@Bean(name = "email1")
+	public Body getBody() {
+		return new Body("Html123");
+	}
+	
+	
+	
+
+}

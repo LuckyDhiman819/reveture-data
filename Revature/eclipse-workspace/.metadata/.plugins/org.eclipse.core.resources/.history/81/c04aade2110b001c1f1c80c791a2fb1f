@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Add product Form</h1>
+
+<form:form action="saveProduct" modelAttribute="product">
+
+		ProductId:- <form:input path = "productId" /><br>
+		ProductName:- <form:input path = "productName" /><br>
+		quantityOnHand:- <form:input path = "quantityOnHand" /><br>
+		price:- <form:input path = "price" /><br>
+		
+		<input type = "submit" value = "save product">
+</form:form>
+
+</body>
+</html>

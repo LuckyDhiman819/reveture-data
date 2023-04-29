@@ -1,0 +1,65 @@
+package com.training.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+/**
+ * Servlet implementation class CalculateBill
+ */
+public class CalculateBill extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public CalculateBill() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+			
+		
+		response.setContentType("text/html");
+		
+		HttpSession session = request.getSession();
+		String quanitity[] = (String[]) session.getAttribute("quanityProducts");
+		String price[] = (String[]) session.getAttribute("priceProducts");
+		String username = (String) session.getAttribute("getname");
+
+		
+		int totalAmount = 0;
+		
+		PrintWriter out = response.getWriter();
+		
+		out.println("<html><body bgcolor = red>");
+		for(int i = 0; i<quanitity.length; i++) {
+			out.println("quantity "+quanitity[i]+" Price "+ price[i]);
+//			totalAmount += (quanitity[i]*price[i]);
+		}
+		
+		out.println("<h2> you looged in with username "+ username);
+		out.println("<h1>your total Amount is:- "+ totalAmount);
+		out.println("<br><a href = SignOut>SignOut</a>");
+		out.println("</body></html>");
+		
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
+	}
+
+}

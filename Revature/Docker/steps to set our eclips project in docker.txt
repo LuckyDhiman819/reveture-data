@@ -1,0 +1,128 @@
+Use case : Create our own docker image and upload it on docker hub.
+
+Step 1: Create a spring boot app
+
+package com;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@SpringBootApplication
+@RestController
+public class SpringBootRevatureDemoApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringBootRevatureDemoApplication.class, args);
+	}
+
+	@GetMapping("/revatureTraining")
+	public String revatureTraining() {
+		return "Welcome to revature training - Tufail Ahmed";
+	}
+	@GetMapping("/mockInterviews")
+	public String mock() {
+		return "Welcome to Mock Interviews 1 and 2";
+	}
+}
+
+Step 2: Generate the jar files ( zip)
+
+Right click -> Run as --> Maven install
+
+Step 3 : Create Dockerfile 
+
+FROM java:8
+
+ADD target/spring-boot-revature-demo-0.0.1-SNAPSHOT.jar app.jar
+
+ENTRYPOINT [ "java" , "-jar" , "app.jar" ]
+
+EXPOSE 8080
+
+Step 4: Create image
+
+docker build -t my-first-docker-app .
+
+Step 5: Verify image
+
+docker images
+
+Step 6 : Docker run
+docker run -p 8080:8080 -t my-first-docker-app
+-----sir's command
+docker run -p 8080:8080 -t 8867205331/revature:alstrom
+
+-----my run command
+docker run -p 9090:9090 -t my-first-docker-app .
+
+
+----------------------------------------------------------
+-------------Pushing docker images to docker hub
+
+tag name : alstrom
+image name : my-first-docker-app
+repository name : 8867205331/revature
+
+docker tag my-first-docker-app:latest 8867205331/revature:alstrom
+
+docker push 8867205331/revature:alstrom
+
+---------------Pull across the globe
+docker pull 8867205331/revature:alstrom
+
+----------------------------------------
+
+C:\Users\tufai>docker tag my-first-docker-app:latest 8867205331/revature:alstrom
+
+C:\Users\tufai>docker push 8867205331/revature:alstrom
+The push refers to repository [docker.io/8867205331/revature]
+6a6e4252e707: Pushed
+35c20f26d188: Mounted from 8867205331/hello
+c3fe59dd9556: Mounted from 8867205331/hello
+6ed1a81ba5b6: Mounted from 8867205331/hello
+a3483ce177ce: Mounted from 8867205331/hello
+ce6c8756685b: Mounted from 8867205331/hello
+30339f20ced0: Mounted from 8867205331/hello
+0eb22bfb707d: Mounted from 8867205331/hello
+a2ae92ffcd29: Mounted from 8867205331/hello
+alstrom: digest: sha256:f4b4153b891013f93e2a7f0afd334ef38120ac8c41fbadda3512c82a9c061496 size: 2212
+
+C:\Users\tufai>docker pull 8867205331/revature:alstrom
+alstrom: Pulling from 8867205331/revature
+Digest: sha256:f4b4153b891013f93e2a7f0afd334ef38120ac8c41fbadda3512c82a9c061496
+Status: Image is up to date for 8867205331/revature:alstrom
+docker.io/8867205331/revature:alstrom
+
+C:\Users\tufai>docker images
+REPOSITORY            TAG       IMAGE ID       CREATED       SIZE
+8867205331/revature   alstrom   f30ae5e143c8   2 hours ago   661MB
+my-first-docker-app   latest    f30ae5e143c8   2 hours ago   661MB
+postgres              latest    346c7820a8fb   2 days ago    315MB
+nginx                 latest    822b7ec2aaf2   3 days ago    133MB
+mysql                 latest    0716d6ebcc1a   3 days ago    514MB
+
+C:\Users\tufai>docker run -p 8080:8080 -t 8867205331/revature:alstrom
+
+
+
+
+
+-----------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

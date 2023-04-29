@@ -1,0 +1,33 @@
+A Servlet is a Java class that takes incoming requests, processes them, and generates a response to send 
+back to the user.
+ 
+The Servlet container is the component of an application server that interacts with Java servlets and is 
+responsible for managing the execution of servlets and JSP pages for Java applications.
+
+There are three life cycle methods of a Servlet :
+init()
+service()
+destroy()
+
+The <servlet> element is used to declare the servlet name, the fully-qualified class name of the servlet, 
+and any initialization parameters. The name for every servlet must be unique across the deployment descriptor.
+
+The <servlet-mapping> element is used to specify a URL pattern, and the name of the servlet which handles requests whose URL matches the given pattern. The URL pattern uses an asterisk (*) at the beginning or end of the pattern to 
+indicate zero or more of any character.
+
+The web.xml file defines mappings between URL paths and the servlets that will handle requests with those paths
+
+doGet() shall be used when small amount of data and insensitive data like a query has to be sent as a request. 
+doPost() shall be used when comparatively large amount of sensitive data has to be sent. 
+
+ServletConfig is an object containing some initial parameters or configuration information created by Servlet Container and passed to the 
+servlet during initialization.
+
+ServletContext is the object created by Servlet Container to share initial parameters or configuration information to the whole application.
+
+
+A cookie is a small piece of information that is persisted between the multiple client requests.
+
+org.hibernate.criterion
+
+An object-oriented representation of a query criterion that may be used as a restriction in a Criteria query.

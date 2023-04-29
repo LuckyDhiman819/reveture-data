@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript" src = "MyjsFile.js"></script>
+</head>
+<body>
+    <Script>
+        var a1 = 1000
+        function display1(){
+
+            for (let i = 0; i < 5; i++) {
+                var str = "Hello World"
+                document.getElementById("display1").innerHTML+= "<h4>"+str+"</h4>";        
+            }
+
+        }
+        function display2(){
+
+            var num = prompt("Entre the number to check")
+            var num1 = parseInt(num);
+            
+            if (num1>5) {
+                document.getElementById("display2").innerHTML += "<h4>the number "+num1+" is greater then 5.</h4>";
+            } else {
+                document.getElementById("display2").innerHTML += "<h4>the number "+num1+" is less then 5.</h4>"; 
+            }
+
+        }
+        function display3(){
+                var a = 100;  
+                a2 = 500;
+                console.log("Value is",a+a1+a2);         
+
+        }
+        function display4(){
+                var a = 100;  
+                console.log("Value is",a+a1+a2);         
+
+        }
+        function addNumbers(){
+            var a1, a2;
+            a1 = prompt('Entre the first Number', 0);
+            a2 = prompt("Entre the seocnd Number", 0);
+            a4 = parseInt(a1);
+            a5 = parseInt(a2);
+            var a3 = a4+a5;
+             
+            var a1 = document.getElementById("one");
+            a1.innerHTML+= "<h4>This is your first number is "+a4+"</h4>"; 
+            var a2 = document.getElementById("two");
+            a2.innerHTML+= "<h4>This is your second number is "+a5+"</h4>"; 
+            var a = document.getElementById("add");
+            a.innerHTML+= "<h4>This is your add number is "+a3+"</h4>";
+
+        }
+    </Script>
+    <div></div>
+      <h3><input type="Button" value="Button1" onclick="display1()"></h3>
+      <h3><input type="Button" value="Button2" onclick="display2()"></h3>
+      <h3><input type="Button" value="Button3" onclick="display3()"></h3>
+      <h3><input type="Button" value="Button4" onclick="display4()"></h3>
+      <h3><input type="Button" value="AddNumber" onclick="addNumbers()"></h3>
+      <h3><input type="Button" value="Display" onclick="displayHello()"></h3>
+    <div id = "display1">
+
+    </div>
+    <div id = "display2">
+
+    </div>
+    <div id = "display3">
+
+    </div>
+    <div id = "one">
+
+    </div>
+    <div id = "two">
+
+    </div>
+    <div id = "add">
+
+    </div>
+
+
+</body>
+</html>

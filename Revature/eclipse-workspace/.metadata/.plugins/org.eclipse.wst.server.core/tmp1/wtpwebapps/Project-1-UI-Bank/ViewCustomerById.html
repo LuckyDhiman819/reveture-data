@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/CSS" href="css/bodypart.css">
+
+<style type="text/css">
+h2 {
+
+	text-align: center;
+	margin-top: 2cm;
+}
+p {
+	text-align: center;
+}
+table{
+	border-collapse:separate;
+	margin-top: 1cm;
+}
+body{
+border:solid;
+border-width:10px;
+margin-left:200px;
+margin-right:200px;
+margin-bottom:5px;
+padding-bottom:50px;
+background-color:lightgreen;
+}
+</style>
+<script type="text/javascript" src="js/CustomerByIdValidator.js"></script>
+</head>
+<body>
+
+<h2><u><i> Enter Customer ID to View <br>the Customer</h2>
+	<form action="ViewCustomerByIdServlet" onsubmit="return customerValidate()">
+		<table align="center" cellspecing="10" cellpadding="10">
+			<tr>
+				<td>Customer Id:</td>
+				<td><input type="number" name="customerId" id="customerId" class="int" placeholder="Entre Your Id" /><hr></td>
+			</tr>
+		
+			<tr>
+				<td><input class = "btn" type="submit" value="View" /></td>
+				<td><input class="btn" type="reset" value="Clear" /></td>
+			</tr>
+		</table>
+		</form>
+		<a href="EmployeeHome.html">GO Back</a>
+</body>
+</html>

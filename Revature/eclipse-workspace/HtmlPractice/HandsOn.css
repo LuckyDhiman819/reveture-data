@@ -1,0 +1,51 @@
+@charset "ISO-8859-1";
+
+body{
+	background-color: gray;
+}
+table
+{
+	border: 3px solid black;
+}
+
+
+td
+{
+	border: 1px solid black;
+	
+}
+
+/* input[type=input], input[type=passowrd] {
+  background-color: #5746f0;
+  border: 2px solid red;
+  border-radius: 25px;
+  color: #cac8e0;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font: Comic Sans MS
+} */
+input[type=text], input[type=passowrd] {
+	text-align: center;
+}
+
+#address{
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.buttons {
+	
+ 	text-align: center;
+}
+
+#submit{
+	margin-left:10px;
+}
+#reset{
+	margin-left:20px;
+}
+#demo{
+	margin-left:40px;
+}

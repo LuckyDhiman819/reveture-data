@@ -1,0 +1,23 @@
+package problemSolving;
+
+import java.awt.List;
+
+public class MinimumLose {
+	
+	public static int minimumLoss(List<Long> price) {
+	    // Write your code here
+	        int len = price.length;
+	        long arr[] = new long[len];
+	        for(long x:price){
+	            for(long y:price){
+	                
+	                arr[]
+	                
+	            }
+	        }
+
+	    }
+
+	}
+
+}

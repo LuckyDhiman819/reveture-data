@@ -1,0 +1,5 @@
+package com.reature.ems.aspect;
+
+public class LoggingAspect {
+
+}

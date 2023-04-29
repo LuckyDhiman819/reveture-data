@@ -1,0 +1,18 @@
+package com.reature.ems.aspect;
+
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class StockAspect {
+	
+	
+	public void beforeAddStock() {
+		
+	}
+	public void afterRemoveStock() {
+		
+	}
+
+}

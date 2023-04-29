@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;Product_App_Servlet&apos;&#x0D;&#x0A;- Original project: &apos;PMS_Project&apos;&#x0D;&#x0A;- Destination element: &apos;Product_App_Servlet&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     productData.log&#x0D;&#x0A;     DB.properties" description="Copy files" element1="productData.log" element2="DB.properties" files="2" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1628598585009" target="/Product_App_Servlet" units="0" version="1.0"/>
+</session>

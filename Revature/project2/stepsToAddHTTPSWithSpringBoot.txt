@@ -1,0 +1,99 @@
+Spring --------------Controller
+
+@CrossOrigin(origins = "http://localhost:4200")
+
+
+restart spring
+
+Angular 
+
+	services
+		product
+
+	components
+
+		product-list
+		product-add
+	models	
+		product.ts
+
+
+1)
+
+ H:\alstrom-product-app> ng g s services/product
+PS H:\alstrom-product-app> ng g c components/product-list    
+PS H:\alstrom-product-app> ng g c components/product-add     
+PS H:\alstrom-product-app> ng g class models/product --type=model
+
+2. update app.module.ts
+
+import { HttpClientModule } from '@angular/common/http'
+
+
+ imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule		*****
+  ],
+
+3. update models/product.ts
+
+export class Product {
+    productId?: number;
+    productName?: string;
+    quantityOnHand?: number;
+    price?: number;
+}
+
+
+4. open services/product.service.ts
+
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Product } from '../models/product.model';
+
+const productUrl = "http://localhost:9090/product"
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ProductService {
+
+  //DI
+  constructor(public http:HttpClient) { }
+
+  getProducts() :Observable<Product[]>{
+      return this.http.get<Product []>(productUrl).pipe();
+  }
+}
+
+5. product-list.component.ts
+  //
+  constructor(public productService:ProductService) { }
+
+  products : Product[] = [] ;
+  ngOnInit(): void {
+      this.productService.getProducts().subscribe((data: any[])=>{
+        console.log("###Products recieved from spring :")
+        console.log(data);
+        this.products = data;
+      }) 
+  }
+
+6.app.component.html ( remove all the stuffs)
+
+<h1>Alstrom Product -App</h1>
+<app-product-list></app-product-list>			*** selector of product-list.component.ts
+
+
+Save all the files and run in the browser 
+
+
+
+
+
+
+
+
+

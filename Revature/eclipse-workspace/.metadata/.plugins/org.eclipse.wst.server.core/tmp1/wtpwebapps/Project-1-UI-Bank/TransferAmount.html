@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/CSS" href="css/bodypart.css">
+
+<style type="text/css">
+h2 {
+
+	text-align: center;
+	margin-top: 2cm;
+}
+p {
+	text-align: center;
+}
+table{
+	border-collapse:separate;
+	margin-top: 1cm;
+}
+body{
+border:solid;
+border-width:10px;
+margin-left:200px;
+margin-right:200px;
+margin-bottom:5px;
+padding-bottom:50px;
+background-color:lightgreen;
+}
+</style>
+</head>
+<body>
+<h2><i><u> Enter all Details to Transfer Amount</h2>
+	<form action="TransferAmountServlet">
+		<table align="center" cellspecing="10" cellpadding="10">
+			<tr>
+				<td>senderId:</td>
+				<td><input type="number" name="senderId" id="senderId" class="int" placeholder="Enter Sender Id" /><hr></td>
+			</tr>
+			<tr>
+				<td>receiverId:</td>
+				<td><input type="number" name="receiverId" id="receiverId" class="int" placeholder="Enter Receiver Id" /><hr></td>
+			</tr>
+			<tr>
+				<td>Amount:</td>
+				<td><input type="number" name="amount" id="amount" class="int" placeholder="Enter Amount" /><hr></td>
+			</tr>
+			<tr>
+				<td><input class="btn" type="submit" value="Transfer" /></td>
+				<td><input class="btn" type="reset" value="Clear" /></td>
+			</tr>
+		</table>
+		</form>
+		<a href="UserHome.html">GO Back</a>
+
+</body>
+</html>

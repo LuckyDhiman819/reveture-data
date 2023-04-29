@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <Script>
+        function onBlurMethod(id){
+            
+            var getid = document.getElementById(id);
+            var data = getid.value;
+            if(data.length==0){
+                var str = id+"1";
+                var spanid = document.getElementById(str);
+                getid.style.border = "2px solid #d11002";
+                spanid.innerHTML = "This is mandatory field";
+                spanid.style.color = "red";
+            }
+            else{
+                var str = id+"1";
+                var spanid = document.getElementById(str);
+                getid.style.border = "2px solid #046307";
+                spanid.innerHTML = "";
+                // spanid.style.color = "red";
+            }
+            var a1 = document.getElementById("price").value;
+            var a2 = document.getElementById("quantity").value;
+            if(a1.length>0 && a2.length>0){
+                var x = parseInt(a1);
+                var y = parseInt(a2);
+                var bill = document.getElementById("bill");
+                
+                bill.innerHTML = "Total Bill:- "+(x*y);
+            }
+    
+        }
+        // function onfocus(id){
+        //     var getid = document.getElementById(id);
+        //     var data = getid.value;
+        //     if(data.length>0){
+        //         var str = id+"1";
+        //         var spanid = document.getElementById(str);
+        //         // getid.style.border = "2px solid #d11002";
+        //         spanid.innerHTML = "";
+        //     }
+        // }
+        
+    </Script>
+    <form id = "formName">
+
+        *Product Price:- <input type="text" name="price" id = "price" onblur="onBlurMethod(id)">
+        <!-- <span id = "price1"></span> -->
+        <br><br>
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        *Product Quantity:- <input type="text" name="quantity" id = "quantity" onblur="onBlurMethod(id)">
+        <!-- <span id = "quantity1"></span> -->
+        <br>
+        <small  class=" text-danger form-text text-muted">We'll never share your email with anyone else.</small>
+
+        <div id = "bill">
+            Total bill:- 0
+        </div>
+
+
+    </form>
+
+</body>
+</html>

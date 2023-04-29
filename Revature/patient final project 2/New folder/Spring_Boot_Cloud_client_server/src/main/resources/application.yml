@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: lucky
+  profiles:
+    active: native
+  cloud:
+    config:
+      url: http://localhost:8888
+server:
+  port: 9999

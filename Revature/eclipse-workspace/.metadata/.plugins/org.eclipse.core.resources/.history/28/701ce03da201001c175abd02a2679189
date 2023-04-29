@@ -1,0 +1,15 @@
+package com.reature.ems.model;
+
+public class ContactDetails {
+	
+	private String phoneNumber;
+	private String homeNumber;
+	private String parentsNumber;
+	public ContactDetails() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+
+}

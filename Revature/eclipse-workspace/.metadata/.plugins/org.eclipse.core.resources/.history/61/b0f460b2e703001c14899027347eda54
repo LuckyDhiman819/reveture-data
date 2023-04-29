@@ -1,0 +1,27 @@
+package com.reature.ems.model;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.stereotype.Component;
+
+import lombok.Data;
+
+@Component("contact")
+@Data
+public class ContactDetails {
+	
+	private String phoneNumber;
+	private String homeNumber;
+	private String parentsNumber;
+	
+	
+	@PostConstruct
+	public void detais() {
+		System.out.println("Contact Called");
+	}
+	
+	
+	
+	
+
+}

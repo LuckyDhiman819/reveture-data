@@ -1,0 +1,5 @@
+package com.revature.training.model;
+
+public class Employee {
+
+}

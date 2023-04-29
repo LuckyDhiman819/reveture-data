@@ -1,0 +1,15 @@
+package com.revature.ems.configuration;
+
+import org.springframework.context.annotation.Configuration;
+
+import com.reature.ems.model.Employee;
+
+@Configuration
+public class AppConfig {
+	
+	public Employee getEmployee() {
+		return new Employee();
+	}
+	
+
+}

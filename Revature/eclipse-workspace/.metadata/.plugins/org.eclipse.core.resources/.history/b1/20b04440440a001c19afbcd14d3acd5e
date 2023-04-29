@@ -1,0 +1,17 @@
+package com.revature.training.service;
+
+import java.util.List;
+
+import com.revature.training.pms.model.Cart;
+
+public interface CartService {
+	public boolean addProduct(Cart product);
+	public boolean deleteProduct(int productId);
+	public boolean updateProduct(Cart product);
+	public Cart getProductById(int productId);
+	public List<Cart> getProductByName(String productName);
+	public List<Cart> getAllProducts();
+	public List<Cart> filterByPrice(int lowerPrice,int upperPrice);
+	public boolean isProductExists(int productId);
+	
+}

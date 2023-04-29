@@ -1,0 +1,29 @@
+package com.reature.ems.aspect;
+
+
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
+import org.springframework.stereotype.Component;
+@Aspect
+@Component
+public class ValidateAccountDetailAspect {
+	
+	@Around(" execution (* com.revature.ems.model.Account.*(..))")
+	public void check(ProceedingJoinPoint joinPoint) throws Throwable {
+		String functionName = joinPoint.getSignature().getName();
+		System.out.println("Calling Around - Before :  "+functionName);
+		//you can check the the amount is negative or not
+		//if the amount is negative , then don't write proceed
+		//if the amount is positive , then want to proceed
+		Object allArgs[]= joinPoint.getArgs();
+		Integer amount = (Integer) allArgs[0];
+		if(amount>0)
+			joinPoint.proceed();
+		else
+			System.out.println("Amount is less than 0, hence cannot proceed");
+		System.out.println("Calling Around - After  : "+functionName);
+		
+	}
+	
+}

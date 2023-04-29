@@ -1,0 +1,46 @@
+public static int minimumLoss(List<Long> price) {
+    // Write your code here
+//         Map<Long, Integer> map = new Map<>();
+        
+//         for(int i = 0; i<price.size(); i++){
+//             map.put(price.get(i), i);
+//         }
+        Collections.sort(price);
+        long minimum = Long.MAX_VALUE;
+        for(int i = price.size()-1; i>=0; i--){
+            if(i-1<0){
+                break;
+            }
+            else{
+                if(minimum>(price.get(i)-price.get(i-1))){
+                    minimum = price.get(i)-price.get(i-1);
+                }
+            }
+        }
+        
+        return (int) minimum;
+
+    }
+
+}
+=================================================================
+
+Collections.sort(price);
+        long minimum = Long.MAX_VALUE;
+        for (int i = 0; i < price.size(); i++) {
+    System.out.println(price.get(i)+" ");
+}
+        // 2 5 7 8 20 
+        for(int i = price.size()-1; i>=0; i--){
+            if(i-1<0){
+                break;
+            }
+            else{
+                if(minimum>=(price.get(i)-price.get(i-1))){
+                    minimum = (price.get(i)-price.get(i-1));
+                    System.out.println(price.get(i)+" "+price.get(i-1)+" "+ (price.get(i)-price.get(i-1)));
+                }
+            }
+        }
+        
+        return (int) minimum;

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/CSS" href="css/bodypart.css">
+
+<style type="text/css">
+h2 {
+
+	text-align: center;
+	margin-top: 2cm;
+}
+p {
+	text-align: center;
+}
+
+
+</style>
+</head>
+<body>
+	<h2><i><u> Enter Customer ID to Delete <br>the Customer</h2>
+		<form action="DeleteCustomerServlet">
+			<table align="center" cellspecing="10" cellpadding="10">
+				<tr>
+					<td>Customer Id:</td>
+					<td><input class="int" type="number" name="customerId" id="customerId" placeholder="Entre the customer id" /><hr></td>
+				</tr>
+				
+				<tr>
+					<td><input class = "btn" type="submit" value="Delete" /></td>
+					<td><input class = "btn" type="reset" value="Clear" /></td>
+				</tr>
+			</table>
+			<a href="EmployeeHome.html">GO Back</a>
+		</form>
+</body>
+</html>

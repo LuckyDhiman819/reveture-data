@@ -1,0 +1,145 @@
+package com.reature.ems.model;
+
+public class Employee {
+	
+	private String empName;
+	private int empId;
+	private String empAddress;
+	private int salary;
+	
+//	object
+	private Email email;
+	
+	
+	
+	public Employee() {
+		
+	}
+
+
+
+	public Employee(String empName, int empId, String empAddress, int salary) {
+		super();
+		this.empName = empName;
+		this.empId = empId;
+		this.empAddress = empAddress;
+		this.salary = salary;
+	}
+
+
+
+	public String getEmpName() {
+		return empName;
+	}
+
+
+
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+
+
+
+	public int getEmpId() {
+		return empId;
+	}
+
+
+
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+
+
+
+	public String getEmpAddress() {
+		return empAddress;
+	}
+
+
+
+	public void setEmpAddress(String empAddress) {
+		this.empAddress = empAddress;
+	}
+
+
+
+	public int getSalary() {
+		return salary;
+	}
+
+
+
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+
+
+
+	
+
+
+
+	@Override
+	public String toString() {
+		return "Employee [empName=" + empName + ", empId=" + empId + ", empAddress=" + empAddress + ", salary=" + salary
+				+ ", email=" + email + "]";
+	}
+
+
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((empAddress == null) ? 0 : empAddress.hashCode());
+		result = prime * result + empId;
+		result = prime * result + ((empName == null) ? 0 : empName.hashCode());
+		result = prime * result + salary;
+		return result;
+	}
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Employee other = (Employee) obj;
+		if (empAddress == null) {
+			if (other.empAddress != null)
+				return false;
+		} else if (!empAddress.equals(other.empAddress))
+			return false;
+		if (empId != other.empId)
+			return false;
+		if (empName == null) {
+			if (other.empName != null)
+				return false;
+		} else if (!empName.equals(other.empName))
+			return false;
+		if (salary != other.salary)
+			return false;
+		return true;
+	}
+
+
+
+	public Email getEmail() {
+		return email;
+	}
+
+
+
+	public void setEmail(Email email) {
+		this.email = email;
+	}
+	
+	
+
+	
+}

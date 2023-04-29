@@ -1,0 +1,10 @@
+127.0.0.1 - - [18/Aug/2021:13:38:28 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [18/Aug/2021:13:38:28 +0530] "GET /Project-1-UI-Bank/ HTTP/1.1" 200 2591
+0:0:0:0:0:0:0:1 - - [18/Aug/2021:13:38:28 +0530] "GET /Project-1-UI-Bank/css/bodypart.css HTTP/1.1" 200 1250
+0:0:0:0:0:0:0:1 - - [18/Aug/2021:13:38:39 +0530] "GET /Project-1-UI-Bank/ HTTP/1.1" 200 2591
+0:0:0:0:0:0:0:1 - - [18/Aug/2021:13:38:39 +0530] "GET /Project-1-UI-Bank/css/bodypart.css HTTP/1.1" 200 1250
+0:0:0:0:0:0:0:1 - - [18/Aug/2021:13:38:40 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [18/Aug/2021:13:38:42 +0530] "GET /Project-1-UI-Bank/EmployeeLogin.html HTTP/1.1" 200 1430
+0:0:0:0:0:0:0:1 - - [18/Aug/2021:13:38:42 +0530] "GET /Project-1-UI-Bank/js/EmployeeLoginValidator.js HTTP/1.1" 200 534
+0:0:0:0:0:0:0:1 - - [18/Aug/2021:13:38:46 +0530] "GET /Project-1-UI-Bank/UserLogin.html HTTP/1.1" 200 1337
+0:0:0:0:0:0:0:1 - - [18/Aug/2021:13:38:46 +0530] "GET /Project-1-UI-Bank/js/LoginValidator.js HTTP/1.1" 200 521

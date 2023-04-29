@@ -1,0 +1,22 @@
+package com.revature.training.repository;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.revature.training.pms.model.Cart;
+
+public interface CartRepository extends CrudRepository<Cart, Integer>{
+	
+	//select * from products where productName = ?
+	public List<Cart> findByProductName(String productName);
+	//select * from products where quantity = ?
+	public List<Cart> findByQuantityOnHand(int quantityOnHand);
+	//select * from products where quantity > ?
+	public List<Cart> findByQuantityOnHandGreaterThan(int quantityOnHand);
+	//select * from products where quantity > ?
+	public List<Cart> findByQuantityOnHandLessThan(int quantityOnHand);
+	
+	public List<Cart> findByPriceBetween(int lowerPrice,int upperPrice);
+
+}

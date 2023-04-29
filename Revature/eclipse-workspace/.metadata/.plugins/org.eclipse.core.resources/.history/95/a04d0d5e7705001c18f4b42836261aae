@@ -1,0 +1,27 @@
+package com;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.revature.training.model.Employee;
+
+@SpringBootApplication
+@RestController
+public class SpringBootExampleApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringBootExampleApplication.class, args);
+	}
+
+	@RequestMapping("/welcome")
+	public String getMessage() {
+		return "<h1>Hello and welcome to Spring Boot - By Tufail Ahmed<h1>";
+	}
+	@RequestMapping("/welcome")
+	public Employee getEmployee() {
+		Employee employee = new Employee();
+		return employee;
+	}
+}

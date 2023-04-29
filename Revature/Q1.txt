@@ -1,0 +1,78 @@
+A Servlet is a Java class that takes incoming requests, processes them, and generates a response to send back to the user.
+ 
+The Servlet container is the component of an application server that interacts with Java servlets and is 
+responsible for managing the execution of servlets and JSP pages for Java applications.
+
+There are three life cycle methods of a Servlet :
+init()
+service()
+destroy()
+
+The <servlet> element is used to declare the servlet name, the fully-qualified class name of the servlet, 
+and any initialization parameters. The name for every servlet must be unique across the deployment descriptor.
+
+The <servlet-mapping> element is used to specify a URL pattern, and the name of the servlet which handles requests whose URL matches the given pattern. 
+The URL pattern uses an asterisk (*) at the beginning or end of the pattern to indicate zero or more of any character.
+
+The web.xml file defines mappings between URL paths and the servlets that will handle requests with those paths
+
+The //Request Dispatcher interface defines an object that passes along the client's request to any other resources 
+(servlet, JSP file, or HTML file) on the server.
+
+//doGet() shall be used when small amount of data and insensitive data like a query has to be sent as a request. 
+//doPost() shall be used when comparatively large amount of sensitive data has to be sent. 
+
+ServletConfig is an object containing some initial parameters or configuration information created by Servlet Container and passed to the 
+servlet during initialization.
+
+ServletContext is the object created by Servlet Container to share initial parameters or configuration information to the whole application.
+
+The Hibernate lifecycle contains the following states: -
+Transient state
+Persistent state
+Detached state
+
+getParameter() method - used to get the value of a specified parameter.
+getParameterValues() method - used to get the multiple values of a specified parameter.(for example checkbox)
+getParameterNames() method - used to get complete list of all parameters.
+
+
+Hibernate is an open-source and lightweight ORM tool that is used to store, manipulate, and retrieve data from the database.
+
+Configuration
+SessionFactory
+Session
+Query
+Criteria
+Transaction
+
+
+Session-It maintains a connection between the hibernate application and database.
+Criteria is a simplified API for retrieving entities by composing Criterion objects.
+Hibernate Query Language is the object-oriented query language of the Hibernate Framework. 
+
+Hibernate performs caching to optimize the performance of an application.
+
+session management technique-
+Cookies
+Hidden form fields
+URL Rewriting-URL Rewriting is a process by which a unique session ID gets appended to each request URL, so the server 
+can identify the user session.
+
+
+The main difference between a session and a cookie is that session data is stored on the server, whereas cookies store data in the visitor's browser. Sessions are more secure than cookies as it is stored in server.
+
+
+Object Relational Mapping (ORM) is a functionality which is used to develop and maintain a relationship between an object and relational 
+database by mapping an object state to database column.
+
+
+
+The main difference is that when you use forward the control is transferred to the next servlet/jsp you are calling, while include 
+retains the control with the current servlet, it just includes the processing done by the calling servlet/jsp(like doing any out.println or other processing).
+
+
+
+In hibernate, get() and load() are two methods which is used to fetch data for the given identifier.
+
+The HttpSession API-container creates a session id for each user

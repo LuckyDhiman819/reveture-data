@@ -1,0 +1,5 @@
+package com.revature.ems.configuration;
+
+public class AppConfig {
+
+}

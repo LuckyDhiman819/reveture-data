@@ -1,0 +1,16 @@
+package com.revature.training.repository;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+
+import com.revature.training.model.Product;
+
+public interface ProductRepositry extends CrudRepository<Product, Integer> {
+	
+	public List<Product> findByProductName(String productName);
+	
+	public List<Product> findByQuantityOnHand(int quantityOnHand);
+	
+
+}

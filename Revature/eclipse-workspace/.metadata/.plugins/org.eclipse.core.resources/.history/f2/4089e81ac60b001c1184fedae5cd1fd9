@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root
+  application:
+    name: lucky
+  profiles:
+    active: native
+  cloud:
+    config:
+      uri: http://localhost:8888
+server:
+  port: 9999

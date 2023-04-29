@@ -1,0 +1,23 @@
+package com.revature.training.controller;
+
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HomeController {
+	@Value("${company.companyname}")
+	private String companyName;
+	
+	@Autowired
+	Company company;
+	
+	@GetMapping("/cmp")
+	public String getCompanyName() {
+		return companyName;
+	}
+	
+	@GetMapping("/getCompanyDetails")
+	public Company getCompanyDetails() {
+		return company;
+	}
+}

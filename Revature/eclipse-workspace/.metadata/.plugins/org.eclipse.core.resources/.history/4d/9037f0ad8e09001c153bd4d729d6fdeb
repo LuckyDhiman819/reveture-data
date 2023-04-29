@@ -1,0 +1,10 @@
+package com.revature.training.model;
+
+public class Company {
+
+	
+	private String companyName;
+	private String companyLocation;
+	private String companyAddress;
+
+}

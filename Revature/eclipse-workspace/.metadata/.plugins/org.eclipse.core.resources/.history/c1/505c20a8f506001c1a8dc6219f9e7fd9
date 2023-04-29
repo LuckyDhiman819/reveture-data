@@ -1,0 +1,142 @@
+package com.revature.training.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.revature.training.model.Product;
+import com.revature.training.service.ProductServices;
+
+@RestController
+@RequestMapping("product")
+public class ProductController {
+	@Autowired
+	ProductServices productServices;
+	
+	@GetMapping
+	public ResponseEntity<List<Product>> getAllProduct(){
+		System.out.println("All Products Details....");
+		ResponseEntity<List<Product>> responseEntity = null;
+		List<Product> allProduct = productServices.getAllProducts();
+		
+		if(allProduct.size()==0) {
+			responseEntity = new ResponseEntity<List<Product>>(allProduct, HttpStatus.NO_CONTENT);
+		}
+		else {
+			
+			responseEntity = new ResponseEntity<List<Product>>(allProduct, HttpStatus.OK);
+		}
+		
+		
+		return responseEntity;	
+	}
+	
+	
+	@GetMapping("{productId}")
+	public ResponseEntity<Product> getProduct(@PathVariable("productId")int productId){
+		System.out.println("Product Details By id "+ productId);
+		
+		Product product = productServices.getProductById(productId);
+		
+		
+		
+		return product;	
+	}
+	
+	
+	@GetMapping("/QuantityOnHand/{quantityOnHand}")
+	public List<Product> getProductByQuantity(@PathVariable("quantityOnHand")int quantity){
+		System.out.println("Product Details By id "+ quantity);
+		
+		return (List<Product>) productServices.findByQuantityOnHand(quantity) ;	
+	}
+	
+	
+	@GetMapping("/ProductName/{productName}")
+	public List<Product> getProductByName(@PathVariable("productName")String PName){
+		System.out.println("Product Details By Name "+ PName);
+		
+		return (List<Product>) productServices.getProductByName(PName);	
+	}
+	
+	
+	@GetMapping("/filterProductByPrice/{price1}/{price}")
+	public List<Product> getProductByPrice(@PathVariable("price1")int price1, @PathVariable("price")int price2){
+		System.out.println("Product price "+ price1+" "+price2 );
+		
+		return (List<Product>)productServices.filterProductByPrice(price1, price2);
+	}
+	
+	
+	@GetMapping("/{productName}/range/{price1}/{price}")
+	public List<Product> getByNameAndRange(@PathVariable("productName")String name ,@PathVariable("price1")int price1, @PathVariable("price")int price2){
+		System.out.println("Product price "+ price1+" "+price2 );
+		
+		return (List<Product>)productServices.findByNameAndRange(name, price1, price2);
+	}
+	
+	
+	@PostMapping
+	public ResponseEntity<String> setProduct(@RequestBody Product product){
+		
+		ResponseEntity<String> responseEntity = null;
+		String message = null;
+		System.out.println("All Products Called....");
+		
+		int productId = product.getProductId();
+		
+		if(productServices.isProductExists(productId)) {
+			
+			message = "This Product with product Id - "+productId+" already Exist";
+			responseEntity = new ResponseEntity<String>(message, HttpStatus.CONFLICT);
+			
+		}
+		else {
+			message = "This Product with product Id - "+productId+" Susscessfully Created";
+			responseEntity = new ResponseEntity<String>(message, HttpStatus.CREATED);
+			
+			productServices.addProduct(product);
+		}
+//		System.out.println(product);
+		return responseEntity;	
+	}
+	
+	
+	@PutMapping
+	public String putProduct(@RequestBody Product product){
+		System.out.println("put Method Products Called....");
+		productServices.addProduct(product);
+//		System.out.println(product);
+		return "Product update Succesfully";	
+	}
+	
+	
+	@DeleteMapping
+	public String deleteProduct(@RequestBody Product product){
+		System.out.println("Delete Products Called....");
+		productServices.deleteAllProducts();
+		return "All products Deleted";
+	}
+	
+	
+	@DeleteMapping("{productId}")
+	public String deleteProductById(@PathVariable("productId")int pid){
+		System.out.println("Delete Product using by id is:- "+ pid);
+//		System.out.println(product);
+		productServices.deleteProduct(pid);
+//		System.out.println(product);
+		return "Product delete Succesfully";
+			
+	}
+	
+}

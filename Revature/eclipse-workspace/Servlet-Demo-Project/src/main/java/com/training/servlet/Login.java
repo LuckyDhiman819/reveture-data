@@ -1,0 +1,102 @@
+package com.training.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import sun.rmi.server.Dispatcher;
+
+/**
+ * Servlet implementation class Login
+ */
+public class Login extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public Login() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+	 * @see Servlet#init(ServletConfig)
+	 */
+	public void init(ServletConfig config) throws ServletException {
+		// TODO Auto-generated method stub
+	}
+
+	/**
+	 * @see Servlet#destroy()
+	 */
+	public void destroy() {
+		// TODO Auto-generated method stub
+	}
+
+	/**
+	 * @see HttpServlet#service(HttpServletRequest request, HttpServletResponse response)
+	 */
+//	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//		// TODO Auto-generated method stub
+//		String username = request.getParameter("username");
+//		String password = request.getParameter("password");
+//		response.setContentType("text/html");
+//		PrintWriter out = response.getWriter();
+//		out.println("<html><body>");
+//		out.println("<h2> you looged in with username "+ username);
+//		out.println("<br>your user password is "+ password);
+//		out.println("</body></html>");
+//	
+//	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		response.setContentType("text/html");
+		PrintWriter out = response.getWriter();
+		
+		HttpSession session = request.getSession();
+		session.setAttribute("getname", username);
+		
+		out.println("<html><body>");
+		
+		if(username.equalsIgnoreCase("Lucky") || username.startsWith("D")) {
+			
+			out.println("<h1> you looged in Successfully");
+//			out.println("<h2> with username "+ username);
+//			out.println("<br>And user password is "+ password);
+			RequestDispatcher dispatcher = request.getRequestDispatcher("ValidateUser");
+			dispatcher.include(request, response);
+		}
+		else {
+			
+			out.println("<br> You are not a valid user "+username);
+			out.println("<br> <a href = login.html>Try Again...</a>");
+			
+		}
+		
+		out.println("</body></html>");
+		
+		
+	}
+
+}

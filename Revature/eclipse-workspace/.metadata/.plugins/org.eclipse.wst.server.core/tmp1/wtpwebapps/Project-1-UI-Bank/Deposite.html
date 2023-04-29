@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/CSS" href="css/bodypart.css">
+
+<style type="text/css">
+h2 {
+
+	text-align: center;
+	margin-top: 2cm;
+}
+p {
+	text-align: center;
+}
+
+</style>
+<script type="text/javascript" src="js/DepositeValidator.js"></script>
+</head>
+<body>
+	<h2><u><i> Enter AMOUNT and PASSWORD <br>to Deposite Amount</h2>
+	<form action="DepositeAmountServlet" onsubmit="return validate()">
+		<table align="center" cellspecing="10" cellpadding="10">
+			<tr>
+				<td>Customer Id:</td>
+				<td><input type="number" name="customerid" id="customerid" placeholder="Entre Your Id" class = "int"/><hr></td>
+			</tr>
+		    
+			<tr>
+				<td>Amount:</td>
+				<td><input type="number" name="amount" id="amount" placeholder="Entre Your Amount" class = "int"/><hr></td>
+			</tr>
+			<tr>
+				<td><input class="btn" type="submit" value="Deposite" /></td>
+				<td><input class="btn" type="reset" value="Clear" /></td>
+			</tr>
+		</table>
+	</form>
+	<a href="UserHome.html">GO Back</a>
+</body>
+</html>

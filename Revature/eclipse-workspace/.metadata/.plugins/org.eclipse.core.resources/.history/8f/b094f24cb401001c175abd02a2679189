@@ -1,0 +1,8 @@
+package com.reature.ems.model;
+
+public class To {
+	
+	private String toName;
+	private String toEmail;
+
+}

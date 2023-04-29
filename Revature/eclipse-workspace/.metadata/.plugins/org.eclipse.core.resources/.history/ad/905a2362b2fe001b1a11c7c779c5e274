@@ -1,0 +1,57 @@
+package com.revature.pms.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.revature.pms.model.Product;
+import com.revature.pms.util.DBConn;
+
+public class ProductDaoHibernate implements ProductDaoDeclare {
+
+	
+	
+	
+	public boolean addProduct(Product product) {
+		
+		
+		return false;
+	}
+
+	public boolean deleteProduct(int productId) {
+		
+		
+		return false;
+	}
+
+	public boolean updateProduct(Product product) {
+		
+		
+		return false;
+	}
+
+	public Product getProductId(int productId) {
+
+		
+		return null;
+	}
+
+	public List<Product> getProductByName(String productName) {
+		
+		return null;
+	}
+
+	public List<Product> getAllProduct() {
+		
+		
+		
+		return null;
+	}
+	
+	
+
+}

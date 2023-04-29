@@ -1,0 +1,94 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+<welcome-file-list>
+		<welcome-file>Home.html</welcome-file>
+	</welcome-file-list>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  
+  	<servlet-name>Welcome</servlet-name>
+  	<display-name>Welcome</display-name>
+  	<description></description>
+  	<servlet-class>com.training.revature.Welcome</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AuthenticateHome</servlet-name>
+  	<display-name>AuthenticateHome</display-name>
+  	<description></description>
+  	<servlet-class>com.training.revature.AuthenticateHome</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AuthenticateProduct</servlet-name>
+  	<display-name>AuthenticateProduct</display-name>
+  	<description></description>
+  	<servlet-class>com.training.revature.AuthenticateProduct</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AuthenticateAddProduct</servlet-name>
+  	<display-name>AuthenticateAddProduct</display-name>
+  	<description></description>
+  	<servlet-class>com.training.revature.AuthenticateProduct</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>AuthenticateLogin</servlet-name>
+  	<display-name>AuthenticateLogin</display-name>
+  	<description></description>
+  	<servlet-class>com.training.revature.AuthenticateLogin</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ErrorHandlerController</servlet-name>
+  	<display-name>ErrorHandlerController</display-name>
+  	<description></description>
+  	<servlet-class>com.revature.pms.execption.ErrorHandlerController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>Welcome</servlet-name>
+  	<url-pattern>/Welcome</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AuthenticateHome</servlet-name>
+  	<url-pattern>/AuthenticateHome</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AuthenticateProduct</servlet-name>
+  	<url-pattern>/AuthenticateProduct</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AuthenticateAddProduct</servlet-name>
+  	<url-pattern>/AuthenticateAddProduct</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>AuthenticateLogin</servlet-name>
+  	<url-pattern>/AuthenticateLogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>ErrorHandlerController</servlet-name>
+  	<url-pattern>/ErrorHandlerController</url-pattern>
+  </servlet-mapping>
+  <error-page>
+		<error-code>405</error-code>
+		<location>/ErrorHandlerController</location>
+	</error-page>
+	
+	<error-page>
+		<exception-type>javax.servlet.ServletException</exception-type>
+		<location>/ErrorHandlerController</location>
+	</error-page>
+
+<error-page>
+		<exception-type>java.lang.NumberFormatException</exception-type>
+		<location>/ErrorHandlerController</location>
+	</error-page>
+	
+	<error-page>
+		<exception-type>java.lang.NullPointerException</exception-type>
+		<location>/ErrorHandlerController</location>
+	</error-page>
+	<error-page>
+		<exception-type>java.lang.NumberFormatException</exception-type>
+		<location>/ErrorHandlerController</location>
+	</error-page>
+</web-app>

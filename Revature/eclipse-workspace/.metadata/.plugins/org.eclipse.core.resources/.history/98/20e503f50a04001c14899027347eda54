@@ -1,0 +1,61 @@
+package com;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.reature.ems.dao.Account;
+import com.reature.ems.model.ContactDetails;
+import com.reature.ems.model.Email;
+import com.reature.ems.model.Employee;
+import com.reature.ems.repositry.EmployeeRepo;
+import com.revature.ems.configuration.AppConfig;
+import com.revature.ems.service.EmployeeServices;
+
+/**
+ * Hello world!
+ *
+ */
+/**
+ * @author Lucky Dhiman
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	AbstractApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+    	//ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+    	
+    	Employee emp = (Employee) context.getBean("emp");
+    	Email email = (Email) context.getBean("email2");
+    	System.out.println("before contact");
+    	ContactDetails contact = (ContactDetails) context.getBean("contact");
+    	EmployeeServices services = (EmployeeServices) context.getBean(EmployeeServices.class);
+    	EmployeeRepo repo = (EmployeeRepo) context.getBean(EmployeeRepo.class);
+//    	bank operation
+    	Account acc = (Account) context.getBean(Account.class);
+    	
+    	email.setTo("luckydhiman@gmail.com");
+    	email.setFrom("lucky@gmail.com");
+    	
+    	contact.setPhoneNumber("7988857819");
+    	
+    	repo.getEmployeeRepo();
+    	services.getEmployeeServices();
+    	
+    	emp.setEmail(email);
+    	emp.setContact(contact);
+    	emp.setEmpId(10);
+//    	emp.setEmpName("Lucky");
+    	emp.setSalary(50000);
+    	
+    	System.out.println(emp+" "+repo.getEmployeeRepo()+" "+services.getEmployeeServices());
+    	
+    	context.registerShutdownHook();
+    	
+    	
+        
+    }
+}

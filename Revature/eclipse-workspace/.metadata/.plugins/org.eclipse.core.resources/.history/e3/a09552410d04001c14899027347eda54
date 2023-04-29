@@ -1,0 +1,24 @@
+package com.reature.ems.aspect;
+
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class StockAspect {
+	
+	@Before("execution(* com.reature.ems.dao.Account+.withdraw(..))")
+	public void beforeAddStock() {
+		
+		System.out.println(" ## Inventory recieved the product");
+		
+	}
+	@After("execution(* com.reature.ems.dao.Stock+.removeStock(..))")
+	public void afterRemoveStock() {
+	
+		System.out.println("## Inventory successfully removed unsed/expired products");
+	}
+
+}

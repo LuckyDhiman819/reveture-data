@@ -1,0 +1,193 @@
+!!!!!!!!!!!!!!!*******************Basic Project*************!!!!!!!!!!!!!!!!!!!!!!!
+what you are
+Empoyee
+Customer
+char accType;
+			if(accType is Employee)
+				work on data on employee table
+			else
+				work on data in customer table
+
+Empoyee:-
+	
+	Register account
+		employee
+		//data will same for both//
+		
+			data
+				String name = null;
+				String fatherName = null;
+				int age = 0;
+				long phoneNumber = 0;
+				long aadharNumber = 0;
+				String address = null;
+				String new_Password = null;
+				String re_Password = null;
+	
+	
+	
+	login 
+		employee
+		
+			if(data exist)
+				then entre the empoyee page
+
+			data 
+				accountid
+				password
+
+
+	reset password
+		employee
+			Check data in employee table
+				if(data exist)
+					then entre the reset page
+		
+		
+		
+	
+			
+			data
+				name 
+				phone number
+				aadhar number
+		
+				reset page
+				if forget your id
+					show id
+				if forget your passoword
+					show password
+					if you want to reset your pass word then click 1
+						password
+						resetpassword
+					or go to menu
+	
+
+	let login complete as employee
+		employee page
+		***employee menu****
+			defaultId  = account id of curent employee logeed in
+			show our details
+			want to upgrade your details
+			customers Operations
+				show All customer details(with account balance also)
+				approve all customer id(aprove which status is null)
+				reject all customer id (reject which status is null)
+				approve customer by id (id need)(no matter its null or aproved or reject)
+					entre customer id
+				reject customer by id(only id need)(no matter its null or aproved)
+					entre customer id
+			Delete your account
+
+		
+
+				8. Logout
+					entre to the employee menu
+				9. Exit
+	
+	
+	
+Customer:-
+	//automatically store in account data base//
+	Register account
+		data
+			String name = null;
+			String fatherName = null;
+			int age = 0;
+			long phoneNumber = 0;
+			long aadharNumber = 0;
+			String address = null;
+			String new_Password = null;
+			String re_Password = null;
+
+	login 
+		if(exist)
+			then entre the customer menu
+	
+
+		data 
+			accountid
+			password
+	
+	reset password
+	employee
+		if(accType is Employee)
+				Check data in employee table
+					if(exist)
+						then entre the reset page
+		else
+			Check data in customer table
+				if(exist)
+					then entre the reset page
+	
+	customer
+
+		
+		data
+			name 
+			phone number
+			aadhar number
+	
+			reset page
+			if forget your id
+				show id
+			if forget your passoword
+				show password
+				if you want to reset your pass word then click 1
+					password
+					resetpassword
+				or go to menu
+
+
+
+
+	let login complete as customer
+	customer page
+		***Customer menu***			
+			if (status == approved)
+				show our details
+				want to upgrade details
+				do banking operation
+				1. View Balance
+				2. Transfer amount
+	
+					add amount
+						entre amount you want to add
+					transfer amount
+						//thoda difficult///
+						your Id is  = default id
+					entre where want to deposit id
+						entre amount
+						amount transfer your balance left now;
+	
+					withdraw amount
+						entre amount you want to withdraw
+							/* not graeter than your actual balance*/
+
+				Delete your account
+					entre your id 
+					and password
+					account delete
+					return to main menu automaticaly 
+						
+				8. Logout
+					entre to the main menu
+				9. Exit
+
+			else
+				your id is not approved yet !!! contact to the registraion for aproval
+				8. Logout
+				9. Exit
+
+
+
+
+
+
+
+/////////////cheak exist in every function//////
+					entre to the main menu
+				9. Exit
+
+
+

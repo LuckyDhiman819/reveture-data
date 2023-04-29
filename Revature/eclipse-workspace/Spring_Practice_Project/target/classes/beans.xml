@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+	<bean id = "emp" class = "com.reature.ems.model.Employee">
+		<constructor-arg name = "empId" value = "101"></constructor-arg>
+   		<constructor-arg name = "empName" value = "Isha"></constructor-arg>
+   		<constructor-arg name = "empAddress" value = "Pune"></constructor-arg>
+   		<constructor-arg name = "salary" value = "50000"></constructor-arg>
+   		<constructor-arg name = "email" ref = "e"></constructor-arg>
+   			
+		
+	</bean>	
+	
+	<bean id = "e" class = "com.reature.ems.model.Email">
+		
+		<constructor-arg name = "to" value = "akshat@gmail.com"></constructor-arg>
+   		<constructor-arg name = "from" value = "isha@gmail.com"></constructor-arg>
+   		<constructor-arg name = "subject" value = "Hi"></constructor-arg>
+   		<constructor-arg name = "body" value = "How you doin"></constructor-arg>
+		
+	
+	</bean>
+	
+
+</beans>

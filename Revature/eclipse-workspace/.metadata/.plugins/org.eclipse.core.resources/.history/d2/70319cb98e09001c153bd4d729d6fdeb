@@ -1,0 +1,13 @@
+package com.revature.training.model;
+
+import lombok.Data;
+
+@Data
+public class Company {
+
+	
+	private String companyName;
+	private String companyLocation;
+	private String companyAddress;
+
+}

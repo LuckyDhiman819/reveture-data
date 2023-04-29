@@ -1,0 +1,5 @@
+package com.reature.ems.model;
+
+public class ContactDetails {
+
+}

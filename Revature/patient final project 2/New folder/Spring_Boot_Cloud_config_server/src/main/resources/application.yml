@@ -1,0 +1,14 @@
+spring:
+ profiles:
+  include: native,default
+ cloud:
+   config:
+    discovery:
+     enabled: true
+    server:
+     native:
+       searchLocations: E:/Revature/config
+     encrypt:
+      enabled: true
+server:
+ port: 8888

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/CSS" href="css/SignUp.css">
+<link rel="stylesheet" type="text/CSS" href="css/bodypart.css">
+
+<script type="text/javascript" src="js/CustomerSignupValidator.js"></script>
+</head>
+<body>
+	<h1><u><i>UI BANKING APP</h1>
+	<h2><u><i></i>Please Enter Customer Registration Detail</h2>
+	<form action="SignUpServlet" onsubmit="return validate()">
+		<table align="center" cellspecing="10" cellpadding="10">
+			<tr>
+				<td>Customer Name</td>
+				<td><input class = "int" type="text" name="customerName" id="customerName" placeholder="Entre your Name" /><hr></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input class = "int" type="Password" name="password" id="password" placeholder="Entre your Password"  /><hr></td>
+			</tr>
+			<tr>
+				<td>Confirm Password</td>
+				<td><input class = "int" type="password" name="confirmpassword"
+					id="confirmpassword" placeholder="Entre your Password Again" /><hr></td>
+			</tr>
+			
+			<tr>
+				<td>Email</td>
+				<td><input class = "int" type="email" name="emailId" id="emailId" placeholder="Entre your Gmail" /><hr></td>
+			</tr>
+			<tr>
+				<td>Mobile Number</td>
+				<td><input class = "int" type="text" name="mobileNumber" id="mobileNumber" placeholder="Entre your Mobile Number" /><hr></td>
+			</tr>
+			
+			<tr>
+				<td>Balance</td>
+				<td><input class = "int" type="number" name="balance" id="balance"
+					  placeholder="Entre your Balance" /><hr></td>
+			</tr>
+			<tr>
+				<td><input class = "btn" type="submit" value="Register" /></td>
+				<td><input class = "btn" type="reset" value="Clear" /></td>
+			</tr>
+
+		</table>
+	</form>
+	<a href="Welcome.html">GO TO Home</a>
+
+</body>
+</html>

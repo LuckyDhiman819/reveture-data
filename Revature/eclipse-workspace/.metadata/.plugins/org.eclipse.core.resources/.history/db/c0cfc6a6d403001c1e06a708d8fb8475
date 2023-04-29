@@ -1,0 +1,9 @@
+package com.reature.ems.repositry;
+
+public class EmployeeRepo {
+	
+	public String getEmployeeRepo() {
+		return "EmployeeRepositry";
+	}
+
+}

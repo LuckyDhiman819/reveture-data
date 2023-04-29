@@ -1,0 +1,12 @@
+package com.revature.training.model;
+
+import lombok.Data;
+
+@Data
+public class Employee {
+	
+	private String emolpyeeId;
+	private String employeeName;
+	private String salary;
+
+}

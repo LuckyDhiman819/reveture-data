@@ -1,0 +1,10 @@
+package com.revature.training.model;
+
+public class Product {
+	
+	private int productId;
+	private String productName;
+	private int quantityOnHand;
+	private int price;
+
+}

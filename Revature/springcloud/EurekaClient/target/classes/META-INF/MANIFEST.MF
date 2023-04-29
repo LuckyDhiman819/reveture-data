@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Built-By: Lucky Dhiman
+Build-Jdk: 16.0.1
+Implementation-Title: EurekaClient
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.example
+Implementation-Vendor: Pivotal Software, Inc.
+Implementation-URL: http://projects.spring.io/spring-boot/EurekaClient/
+Main-Class: com.example.demo.EurekaClientApplication
+Created-By: Maven Integration for Eclipse
+

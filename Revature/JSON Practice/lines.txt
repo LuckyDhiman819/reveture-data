@@ -1,0 +1,49 @@
+doker install ho ja rha hai
+Linuk bhi install kerna hai
+Virtualization to enable kerna hai
+
+
+project1
+18.118.169.9
+
+project2
+13.58.210.56
+
+
+procedure to AWS and puTTy
+-------------------------Deployment
+	space (100 GB)
+	security
+	memory
+	DB
+
+TEAM	- backup
+
+Step 1 : Register and login 
+
+
+Configure Instance - No change
+
+
+How to connect to this VM
+
+3.16.180.234
+---============
+
+download putty and putty-gen
+https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.76-installer.msi
+https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe
+
+----------------------Convert pem file into ppk file
+start -> open putty gen	-> load -> change all files from drop -> select ahmed.pem ->
+success message will come -> save private key -> yes -> give the name as revature
+
+this will save the key as revature.ppk
+
+close puttygen
+----------------------------------------------
+open putty.exe
+
+connection -> SSH --> Auth -> select the revature.ppk file
+
+username : ubuntu

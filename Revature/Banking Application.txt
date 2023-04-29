@@ -1,0 +1,220 @@
+Project discussion happened Thursday (22nd July 2021) : 1-2 PM
+Banking Project
+================Java,SQL,JDBC
+Project 0
+
+P0 - Banking Operations
+
+# Bank 
+
+## Description The Bank app is a console-based application that simulates banking operations. 
+
+A customer can apply for an account, view their balance, and make withdrawals and deposits.
+
+An employee can aprove or deny accounts and view account balances for their customers.
+ 
+## Purpose We want to see that you can meet deadlines and that you can code.
+
+You are expected to complete the following requirements and give a 5 minute presentation of your project to our QC team. 
+
+## Requirements
+ 
+1. Functionality should reflect the below user stories.
+ 
+2. Data is stored in a database.
+ 
+3. A custom stored procedure is called to perform some portion of the functionality. 
+
+4. Data Access is performed through the use of JDBC in a data layer consisting of Data Access Objects. 
+
+5. All input is received using the java.util.Scanner class. 
+
+6. Log4j is implemented to log events to a file.
+ 
+7. A minimum of one (1) JUnit test is written to test some functionality. 
+
+## User Stories * As a user, I can login.
+ 
+* As a customer, I can apply for a new bank account with a starting balance. 
+
+* As a customer, I can view the balance of a specific account. 
+
+* As a customer, I can make a withdrawal or deposit to a specific account.
+ 
+* As a customer, I can post a money transfer to another account. 
+
+* As a customer, I can accept a money transfer from another account. 
+
+* As the system, I reject invalid transactions. 
+
+* Ex: * A withdrawal that would result in a negative balance. 
+
+* A deposit or withdrawal of negative money. 
+
+* As an employee, I can approve or reject an account. 
+
+* As an employee, I can view a customer's bank accounts. 
+
+* As a user, I can register for a customer account.
+ 
+* A an employee, I can view a log of all transactions.
+
+
+###################################
+
+	Lucky Banking App
+
+##################################
+
+
+	1. Login
+	2. Create Account
+	3. Know more about banking app
+	4. Know about developers - Satyam 
+
+
+	10.E X I T
+
+
+	Please enter your choice : 4
+
+
+	About me :
+		
+
+
+	1. Login
+	2. Create Account
+	3. Know more about banking app
+	4. Know about developers - Satyam 
+
+
+
+	Please enter your choice : 2
+
+	Welcome to create/open account section
+
+		Please enter the details to open an acccount :
+	
+		Enter your account type ( E for Employee / C for Customer ) : P
+
+		Incorrect account type, please enter again 
+
+		Enter your account type ( E for Employee / C for Customer ) : E
+
+		
+		Account details for Employee ?
+
+		Enter employee Id : 1212
+		
+		Enter employee name : Ahmed
+		
+		Enter your password : qwerty@123
+
+
+		--
+		--
+		--code to save the employee table in db
+
+		Congrats, Ahmed , your account created successfully!!
+
+
+	1. Login
+	2. Create Account
+	3. Know more about banking app
+	4. Know about developers - Satyam 
+
+
+	Please enter your choice : 2
+
+	Welcome to create/open account section
+
+		Please enter the details to open an acccount :
+	
+		Enter your account type ( E for Employee / C for Customer ) : P
+
+		Incorrect account type, please enter again 
+
+		Enter your account type ( E for Employee / C for Customer ) : C
+
+		Account details for Customer ?
+		
+		Enter customer id : 123123
+
+		Enter customer name : Neha
+		
+		Enter your password : qwerty@123
+
+
+		--
+		--
+		--Table -- Customer
+
+		Congrats, Neha, your bank account opened successfully in our AhmedBank!!
+	
+	1. Login
+	2. Create Account
+	3. Know more about banking app
+	4. Know about developers - Satyam 
+
+	Please enter your choice :1
+		
+		########Login Screen##########
+
+		Please enter the type of login (C - Customer /E - Employee ) : C
+		Please enter your customer id: 1
+
+		2nd case :
+		Please enter the type of login (C - Customer /E - Employee ) : E
+		Please enter your employee id: 1
+		
+		3rd case :
+		Please enter the type of login (C - Customer /E - Employee ) : P
+		Invalid input, please try again
+
+		Please enter your customer id: 123123
+
+		Welcome , Neha
+
+
+		###############Personal page for Neha##############
+
+			1. View Balance
+			2. Transfer amount
+			8. Logout
+			9. Exit
+
+			Enter your choice : 2
+			
+			//to	- 127159
+			//from	- 123123
+			//amount  
+	
+			Please enter the account number of the recipent : 21212
+
+			1st case :
+				customer with customerid 21212 does not exists
+
+			2nd case : 
+
+				Please enter the account number of the recipent :127159
+				Please enter the amount to transfer : 196000
+		
+				1st case : Insufficient balance 
+			
+				Please enter the amount to transfer : 23000
+		
+				Congrats amount of INR 23000 transferred from 123123 to 127159
+
+				Updated Balance of 123123  :
+			
+
+
+As a customer, I can make a withdrawal or deposit to a specific account.
+
+
+login have account number also
+
+reset have to show his data as well as have to change its data
+
+register have diffrent table for employee and customer respectively.

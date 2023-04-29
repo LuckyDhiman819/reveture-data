@@ -1,0 +1,176 @@
+Microsoft Windows [Version 10.0.19042.1165]
+(c) Microsoft Corporation. All rights reserved.
+
+E:\Revature\eclipse-workspace\Project-1-UI-Bank2>git --version
+git version 2.32.0.windows.1
+
+E:\Revature\eclipse-workspace\Project-1-UI-Bank2>git init
+Initialized empty Git repository in E:/Revature/eclipse-workspace/Project-1-UI-Bank2/.git/
+
+E:\Revature\eclipse-workspace\Project-1-UI-Bank2>git add .
+warning: LF will be replaced by CRLF in .gitignore.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in Lucky.log.
+The file will have its original line endings in your working directory
+
+E:\Revature\eclipse-workspace\Project-1-UI-Bank2>git commit -m "Project1 commit"
+[master (root-commit) 64bc616] Project1 commit
+ 65 files changed, 5206 insertions(+)
+ create mode 100644 .classpath
+ create mode 100644 .gitignore
+ create mode 100644 .project
+ create mode 100644 .settings/.jsdtscope
+ create mode 100644 .settings/org.eclipse.jdt.core.prefs
+ create mode 100644 .settings/org.eclipse.m2e.core.prefs
+ create mode 100644 .settings/org.eclipse.wst.common.component
+ create mode 100644 .settings/org.eclipse.wst.common.project.facet.core.xml
+ create mode 100644 .settings/org.eclipse.wst.jsdt.ui.superType.container
+ create mode 100644 .settings/org.eclipse.wst.jsdt.ui.superType.name
+ create mode 100644 .settings/org.eclipse.wst.validation.prefs
+ create mode 100644 Lucky.log
+ create mode 100644 pom.xml
+ create mode 100644 src/main/java/com/project1/controller/DeleteCustomerServlet.java
+ create mode 100644 src/main/java/com/project1/controller/DepositeAmountServlet.java
+ create mode 100644 src/main/java/com/project1/controller/EmployeeLoginServlet.java
+ create mode 100644 src/main/java/com/project1/controller/EmployeeSignUpServlet.java
+ create mode 100644 src/main/java/com/project1/controller/LoginServlet.java
+ create mode 100644 src/main/java/com/project1/controller/SignUpServlet.java
+ create mode 100644 src/main/java/com/project1/controller/TransferAmountServlet.java
+ create mode 100644 src/main/java/com/project1/controller/ViewAllCustomerServlet.java
+ create mode 100644 src/main/java/com/project1/controller/ViewBalanceServlet.java
+ create mode 100644 src/main/java/com/project1/controller/ViewCustomerByIdServlet.java
+ create mode 100644 src/main/java/com/project1/controller/WithdarwAmountServlet.java
+ create mode 100644 src/main/java/com/project1/controller/exception/ExceptionServlet.java
+ create mode 100644 src/main/java/com/project1/dao/CustomerDAO.java
+ create mode 100644 src/main/java/com/project1/dao/CustomerDAOImpl.java
+ create mode 100644 src/main/java/com/project1/dao/EmployeeDAO.java
+ create mode 100644 src/main/java/com/project1/dao/EmployeeDAOImpl.java
+ create mode 100644 src/main/java/com/project1/model/Customer.java
+ create mode 100644 src/main/java/com/project1/model/Employee.java
+ create mode 100644 src/main/java/com/project1/service/CustomerService.java
+ create mode 100644 src/main/java/com/project1/service/CustomerServiceImpl.java
+ create mode 100644 src/main/java/com/project1/service/EmployeeService.java
+ create mode 100644 src/main/java/com/project1/service/EmployeeServiceImpl.java
+ create mode 100644 src/main/java/hibernate.cfg.xml
+ create mode 100644 src/main/java/log4j.properties
+ create mode 100644 src/main/webapp/DeleteCustomer.html
+ create mode 100644 src/main/webapp/Deposite.html
+ create mode 100644 src/main/webapp/EmployeeHome.html
+ create mode 100644 src/main/webapp/EmployeeLogin.html
+ create mode 100644 src/main/webapp/EmployeeSignUp.html
+ create mode 100644 src/main/webapp/SignUp.html
+ create mode 100644 src/main/webapp/TransferAmount.html
+ create mode 100644 src/main/webapp/UserHome.html
+ create mode 100644 src/main/webapp/UserLogin.html
+ create mode 100644 src/main/webapp/ViewAllCustomer.jsp
+ create mode 100644 src/main/webapp/ViewBalance.html
+ create mode 100644 src/main/webapp/ViewCustomerById.html
+ create mode 100644 src/main/webapp/WEB-INF/web.xml
+ create mode 100644 src/main/webapp/Welcome.html
+ create mode 100644 src/main/webapp/Withdraw.html
+ create mode 100644 src/main/webapp/css/EmployeeHome.css
+ create mode 100644 src/main/webapp/css/SignUp.css
+ create mode 100644 src/main/webapp/css/UserHome.css
+ create mode 100644 src/main/webapp/css/bodypart.css
+ create mode 100644 src/main/webapp/js/CustomerByIdValidator.js
+ create mode 100644 src/main/webapp/js/CustomerSignupValidator.js
+ create mode 100644 src/main/webapp/js/DepositeValidator.js
+ create mode 100644 src/main/webapp/js/EmployeeLoginValidator.js
+ create mode 100644 src/main/webapp/js/EmployeeSignupValidator.js
+ create mode 100644 src/main/webapp/js/LoginValidator.js
+ create mode 100644 src/main/webapp/js/ViewBalanceValidator.js
+ create mode 100644 src/main/webapp/js/WithdrawValidator.js
+ create mode 100644 src/test/java/com/project1/service/CustomerServiceImplTest.java
+
+E:\Revature\eclipse-workspace\Project-1-UI-Bank2>git branch -M main
+
+E:\Revature\eclipse-workspace\Project-1-UI-Bank2>git branch -M main
+
+E:\Revature\eclipse-workspace\Project-1-UI-Bank2>git remote add origin
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+E:\Revature\eclipse-workspace\Project-1-UI-Bank2>git remote add origin https://github.com/LuckyDhiman819/Project-1.git
+
+E:\Revature\eclipse-workspace\Project-1-UI-Bank2>git push -u origin main
+Select an authentication method for 'https://github.com/':
+  1. Web browser (default)
+  2. Personal access token
+option (enter for default):
+info: please complete authentication in your browser...
+To https://github.com/LuckyDhiman819/Project-1.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/LuckyDhiman819/Project-1.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+E:\Revature\eclipse-workspace\Project-1-UI-Bank2>git remote add origin https://github.com/LuckyDhiman819/Project-1_UI_App.git
+error: remote origin already exists.
+
+E:\Revature\eclipse-workspace\Project-1-UI-Bank2>git push -u origin main
+To https://github.com/LuckyDhiman819/Project-1.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/LuckyDhiman819/Project-1.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+E:\Revature\eclipse-workspace\Project-1-UI-Bank2>git remote add origin https://github.com/LuckyDhiman819/Project-1_UI_App.git
+error: remote origin already exists.
+
+E:\Revature\eclipse-workspace\Project-1-UI-Bank2>git branch -M main
+
+E:\Revature\eclipse-workspace\Project-1-UI-Bank2>git push -u origin main
+To https://github.com/LuckyDhiman819/Project-1.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/LuckyDhiman819/Project-1.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+E:\Revature\eclipse-workspace\Project-1-UI-Bank2>git remote remove origin
+
+E:\Revature\eclipse-workspace\Project-1-UI-Bank2>git remote add origin https://github.com/LuckyDhiman819/Project-1_UI_App.git
+
+E:\Revature\eclipse-workspace\Project-1-UI-Bank2>git push -u origin main
+To https://github.com/LuckyDhiman819/Project-1_UI_App.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/LuckyDhiman819/Project-1_UI_App.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+E:\Revature\eclipse-workspace\Project-1-UI-Bank2>git push origin master --force
+error: src refspec master does not match any
+error: failed to push some refs to 'https://github.com/LuckyDhiman819/Project-1_UI_App.git'
+
+E:\Revature\eclipse-workspace\Project-1-UI-Bank2>git push origin main --force
+Enumerating objects: 86, done.
+Counting objects: 100% (86/86), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (75/75), done.
+Writing objects: 100% (86/86), 41.34 KiB | 1.80 MiB/s, done.
+Total 86 (delta 28), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (28/28), done.
+To https://github.com/LuckyDhiman819/Project-1_UI_App.git
+ + 9eaf1a7...64bc616 main -> main (forced update)
+
+E:\Revature\eclipse-workspace\Project-1-UI-Bank2>

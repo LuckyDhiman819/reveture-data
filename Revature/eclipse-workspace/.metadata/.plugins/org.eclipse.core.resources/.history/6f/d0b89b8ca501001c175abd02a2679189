@@ -1,0 +1,144 @@
+package com.reature.ems.model;
+
+import javax.annotation.PostConstruct;
+
+public class Employee {
+	
+	private String empName;
+	private int empId;
+	private String empAddress;
+	private int salary;
+	
+//	object Email
+	private Email email;
+	private ContactDetails contact;
+	
+	
+	
+	public Employee() {
+		
+	}
+	@PostConstruct
+	public void rev1() {
+		empName = "Ram Pal";
+	}
+
+
+	public Employee(String empName, int empId, String empAddress, int salary) {
+		super();
+		this.empName = empName;
+		this.empId = empId;
+		this.empAddress = empAddress;
+		this.salary = salary;
+	}
+	
+	
+
+
+	public Employee(String empName, int empId, String empAddress, int salary, Email email, ContactDetails contact) {
+		super();
+		this.empName = empName;
+		this.empId = empId;
+		this.empAddress = empAddress;
+		this.salary = salary;
+		this.email = email;
+		this.contact = contact;
+	}
+
+
+
+	public String getEmpName() {
+		return empName;
+	}
+
+
+
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+
+
+
+	public int getEmpId() {
+		return empId;
+	}
+
+
+
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+
+
+
+	public String getEmpAddress() {
+		return empAddress;
+	}
+
+
+
+	public void setEmpAddress(String empAddress) {
+		this.empAddress = empAddress;
+	}
+
+
+
+	public int getSalary() {
+		return salary;
+	}
+
+
+
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+	
+
+
+
+	
+
+
+
+	public ContactDetails getContact() {
+		return contact;
+	}
+
+
+
+	public void setContact(ContactDetails contact) {
+		this.contact = contact;
+	}
+
+
+
+
+
+	
+
+
+
+
+
+	@Override
+	public String toString() {
+		return "Employee [empName=" + empName + ", empId=" + empId + ", empAddress=" + empAddress + ", salary=" + salary
+				+ ", email=" + email + ", contact=" + contact + "]";
+	}
+
+
+
+	public Email getEmail() {
+		return email;
+	}
+
+
+
+	public void setEmail(Email email) {
+		this.email = email;
+	}
+	
+	
+
+	
+}

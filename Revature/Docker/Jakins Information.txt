@@ -1,0 +1,19 @@
+faf7de11f09d4d6a9dacc4f8a7d78949
+
+
+faf7de11f09d4d6a9dacc4f8a7d78949
+--------------
+jankins details
+
+lucky7988
+root
+
+luckydhiman7988@mail.com
+
+
+
+java		C:\Program Files\Java\jdk1.8.0_291
+
+git		C:\Program Files\Git\bin\git.exe
+
+maven 		E:\Revature\Maven File\apache-maven-3.8.2

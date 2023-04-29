@@ -1,0 +1,131 @@
+package com.spring.boot.project2.aspect;
+
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class PatientLoggingAspect {
+	
+	@Before("execution(* com.spring.boot.project2.controller.patientSignup(..))")
+	public void patientSignupBefore() {
+		
+		System.out.println(" ## Inventory recieved the product");
+		
+	}
+	@After("execution(* com.spring.boot.project2.controller+.patientSignup(..))")
+	public void patientSignupLogingBefore() {
+	
+		System.out.println("## Inventory successfully removed unsed/expired products");
+	}
+	
+	@Before("execution(* com.spring.boot.project2.controller.patientLogin(..))")
+	public void patientLogin() {
+		
+		System.out.println(" ## Inventory recieved the product");
+		
+	}
+	@After("execution(* com.spring.boot.project2.controller+.patientLogin(..))")
+	public void patientLoginafter() {
+		
+		System.out.println("## Inventory successfully removed unsed/expired products");
+	}
+	
+	@Before("execution(* com.spring.boot.project2.controller.editProfile(..))")
+	public void editProfile() {
+		
+		System.out.println(" ## Inventory recieved the product");
+		
+	}
+	@After("execution(* com.spring.boot.project2.controller+.editProfile(..))")
+	public void editProfileAfter() {
+		
+		System.out.println("## Inventory successfully removed unsed/expired products");
+	}
+	
+	@Before("execution(* com.spring.boot.project2.controller.resetPassword(..))")
+	public void resetPassword() {
+		
+		System.out.println(" ## Inventory recieved the product");
+		
+	}
+	@After("execution(* com.spring.boot.project2.controller+.resetPassword(..))")
+	public void resetPasswordAfter() {
+		
+		System.out.println("## Inventory successfully removed unsed/expired products");
+	}
+	@Before("execution(* com.spring.boot.project2.controller.showProfile(..))")
+	public void showProfile() {
+		
+		System.out.println(" ## Inventory recieved the product");
+		
+	}
+	@After("execution(* com.spring.boot.project2.controller+.showProfile(..))")
+	public void showProfileAfter() {
+		
+		System.out.println("## Inventory successfully removed unsed/expired products");
+	}
+	
+	@Before("execution(* com.spring.boot.project2.controller.makeAppointment(..))")
+	public void makeAppointment() {
+		
+		System.out.println(" ## Inventory recieved the product");
+		
+	}
+	@After("execution(* com.spring.boot.project2.controller+.makeAppointment(..))")
+	public void makeAppointmentAfter() {
+		
+		System.out.println("## Inventory successfully removed unsed/expired products");
+	}
+	
+	@Before("execution(* com.spring.boot.project2.controller.admitForm(..))")
+	public void admitForm() {
+		
+		System.out.println(" ## Inventory recieved the product");
+		
+	}
+	@After("execution(* com.spring.boot.project2.controller+.admitForm(..))")
+	public void admitFormAfter() {
+		
+		System.out.println("## Inventory successfully removed unsed/expired products");
+	}
+	@Before("execution(* com.spring.boot.project2.controller.viewAppointmentHistory(..))")
+	public void viewAppointmentHistory() {
+		
+		System.out.println(" ## Inventory recieved the product");
+		
+	}
+	@After("execution(* com.spring.boot.project2.controller+.viewAppointmentHistory(..))")
+	public void viewAppointmentHistoryAfter() {
+		
+		System.out.println("## Inventory successfully removed unsed/expired products");
+	}
+	@Before("execution(* com.spring.boot.project2.controller.viewAdmitFormHistory(..))")
+	public void viewAdmitFormHistory() {
+		
+		System.out.println(" ## Inventory recieved the product");
+		
+	}
+	@After("execution(* com.spring.boot.project2.controller+.viewAdmitFormHistory(..))")
+	public void viewAdmitFormHistoryAfter() {
+		
+		System.out.println("## Inventory successfully removed unsed/expired products");
+	}
+	@Before("execution(* com.spring.boot.project2.controller.viewBill(..))")
+	public void viewBill() {
+		
+		System.out.println(" ## Inventory recieved the product");
+		
+	}
+	@After("execution(* com.spring.boot.project2.controller+.viewBill(..))")
+	public void viewBillAfter() {
+		
+		System.out.println("## Inventory successfully removed unsed/expired products");
+	}
+	
+
+	
+
+}

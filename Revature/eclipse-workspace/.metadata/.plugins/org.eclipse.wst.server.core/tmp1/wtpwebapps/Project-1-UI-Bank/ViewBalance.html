@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/CSS" href="css/bodypart.css">
+
+<style type="text/css">
+h2 {
+
+	text-align: center;
+	margin-top: 2cm;
+}
+p {
+	text-align: center;
+}
+table{
+	border-collapse:separate;
+	margin-top: 1cm;
+}
+
+</style>
+<script type="text/javascript" src="js/ViewBalanceValidator.js"></script>
+</head>
+<body>
+
+<h2> Enter CUSTOMER ID and PASSWORD <br>to view Balance</h2>
+	<form action="ViewBalanceServlet" onsubmit="return validate()">
+		<table align="center" cellspecing="10" cellpadding="10">
+			<tr>
+				<td>CustomerId:</td>
+				<td><input type="number" name="customerId" id="customerId" class="int" placeholder="Enter Your Id" /><hr></td>
+			</tr>
+			<tr>
+				<td>Password:</td>
+				<td><input type="password" name="password" id="password" class="int" placeholder="Enter Your password" /><hr></td>
+			</tr>
+			<tr>
+				<td><input class="btn" type="submit" value="View" /></td>
+				<td><input class="btn" type="reset" value="Clear" /></td>
+			</tr>
+		</table>
+		</form>
+		<a href="UserHome.html">GO Back</a>
+</body>
+</html>

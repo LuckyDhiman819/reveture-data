@@ -1,0 +1,46 @@
+@charset "ISO-8859-1";
+
+body{
+	text: blue;
+	background-color: #1e9c9c
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #5746f0;
+  border: 2px solid rgb(128, 128, 128);
+  border-radius: 20px;
+  color: #cac8e0;
+  padding: 10px 25px;
+  text-decoration: underline;
+  margin: 4px 2px;
+  cursor: pointer;
+  font: Comic Sans MS
+}
+
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover {
+  background-color: #a2e8b5;
+  border: 2px solid #5746f0;
+  border-radius: 10px;
+  color: #200ec2;
+  padding: 10px 25px;
+  text-decoration: underline;
+  margin: 4px 2px;
+  cursor: pointer;
+  font: Comic Sans MS
+}
+
+h1{
+	font: Comic Sans MS;
+	color: #03575c;
+}
+a[type = link]
+{
+	color: green;
+}
+a:hover{
+	color: black;
+}
+a:visited{
+	
+	
+}

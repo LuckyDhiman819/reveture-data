@@ -1,0 +1,11 @@
+package com.reature.ems.model;
+
+public class Email {
+	
+	private String to;
+	private String From;
+	private String subject;
+	private String body;
+	
+	
+}

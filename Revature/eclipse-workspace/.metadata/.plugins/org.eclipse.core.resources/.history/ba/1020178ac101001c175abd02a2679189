@@ -1,0 +1,88 @@
+package com.reature.ems.model;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+public class Email {
+	
+	private To to;
+	private From from;
+	private Subject subject;
+	private Body body;
+	
+	@PostConstruct
+	public void start() {
+		
+	}
+	@PreDestroy
+	public void end() {
+		
+	}
+	
+	
+	public Email() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public Email(To to, From from, Subject subject, Body body) {
+		super();
+		this.to = to;
+		this.from = from;
+		this.subject = subject;
+		this.body = body;
+	}
+
+
+	public To getTo() {
+		return to;
+	}
+
+
+	public void setTo(To to) {
+		this.to = to;
+	}
+
+
+	public From getFrom() {
+		return from;
+	}
+
+
+	public void setFrom(From from) {
+		this.from = from;
+	}
+
+
+	public Subject getSubject() {
+		return subject;
+	}
+
+
+	public void setSubject(Subject subject) {
+		this.subject = subject;
+	}
+
+
+	public Body getBody() {
+		return body;
+	}
+
+
+	public void setBody(Body body) {
+		this.body = body;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Email [to=" + to + ", from=" + from + ", subject=" + subject + ", body=" + body + "]";
+	}
+
+
+	
+	
+	
+	
+}

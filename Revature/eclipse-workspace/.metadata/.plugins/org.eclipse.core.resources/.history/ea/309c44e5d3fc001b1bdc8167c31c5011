@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>Select The Products Which You Want!!</h1>
+
+<form action="ConfirmProduct">
+	
+	<input type = "checkbox" value = "shirt" name = "products">Shirts - <input type = "hidden" value = "900" name = "shirtPrice"> 900<br><br>
+	<input type = "checkbox" value = "caps" name = "products">Caps - <input type = "hidden" value = "200" name = "capPrice"> 200<br>
+	<input type = "checkbox" value = "pent" name = "products">Pents - <input type = "hidden" value = "500" name = "pentPrice"> 500<br>
+	<input type = "checkbox" value = "shoes" name = "products">Shoes - <input type = "hidden" value = "700" name = "shoesPrice"> 700<br>
+	<input type = "checkbox" value = "tie" name = "products">Tie - <input type = "hidden" value = "400" name = "tiePrice"> 400<br>
+	
+	<input type = "submit" value = "confirm Products">
+	
+</form>
+
+</body>
+</html>

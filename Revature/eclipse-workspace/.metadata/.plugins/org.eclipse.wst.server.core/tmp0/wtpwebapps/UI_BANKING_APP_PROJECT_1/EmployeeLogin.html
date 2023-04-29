@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/CSS" href="css/bodypart.css">
+
+<style type="text/css">
+h1 {
+	text-align: center;
+	margin-top: 30px;
+}
+
+h2 {
+	text-align: center;
+	margin-top: 2cm;
+}
+p {
+	text-align: center;
+}
+</style>
+<script type="text/javascript" src="js/EmployeeLoginValidator.js"></script>
+</head>
+<body bgcolor="lightgreen">
+	<h1><u><i>UI BANKING APP</i></u></h1>
+	<h2><u><i>Please Enter Your Login Detailsu</h2>
+	<form action="EmployeeLoginServlet" onsubmit="return employeeValidate()">
+		<table align="center" cellspecing="10" cellpadding="10">
+			<tr>
+				<td><i>EmployeeId:</i></td>
+				<td><input class = "int" type="number" name="employeeid" id="employeeid" placeholder="Entre your Customer Id" /><hr></td>
+				
+			</tr>
+			<tr>
+				<td><i>Password:</i></td>
+				<td><u><input class = "int" type="password" name="password" id="password" placeholder="Entre Your Name"/><hr></u></td>
+				
+			</tr>
+			<tr>
+				<td><i><input class="btn" type="submit" value="Login" /></i></td>
+				<td><i><input class = "btn" type="reset" value="Clear" /></i></td>
+			</tr>
+		</table>
+		<span>
+			<p>If You Are New Employee Please click here to Register:</p>
+			<p>
+				<a href="EmployeeSignUp.html">SignUp...</a>
+			</p>
+		</span>
+	</form>
+	<a href="Welcome.html">GO TO Home</a>
+</body>
+</html>

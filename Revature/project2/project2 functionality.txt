@@ -1,0 +1,112 @@
+----------------------------Skeleton------------------
+Home page
+	Home
+	DEPARTMENTS & SERVICES
+	Covid-19 DashBoard//Static details
+	Mediciene Facality //Static--redirect to login form//
+	Contact-Us
+	About
+	Feedback
+
+	login and signUp// right
+	Images of hostpital// right
++
+
+static
+//fecilities//
+//footer//
+----------------------------------------------------
+loging as a Hospital Employee
+	Approved reject authority of admit form and appointment  form.
+	show patient Details
+	Edit patient details
+	Delete patient details
+	Doctors details(Delete/Update)
+	
+	
+
+static
+//facilities//
+//footer//
+
+--------------------------------------
+
+Login Patient
+
+0) Admit Form
+		basics details
+		Date with time// admit timing
+		Ward
+			Emergency
+			general
+		--	Delux
+			ICU
+			
+		if approved
+			they will allocate room
+		else
+			Your request in in rejection contact with employee
+	
+		
+			
+			
+
+1) Make an appointment method
+	Form
+		basics details
+		department list
+		doctors list
+		disease list
+		Date with time	
+		
+		
+	if approved
+			they will allocate appointment
+		else
+			Your request in in rejection contact with employee
+		
+
+
+2) Medical History/Reports//(Static)//
+	
+class
+
+medicale amount class bill
+bill model java tabled patient foriengh
+
+
+3) Bill Amount	
+	medicines cost
+	surguery cost
+	Appointment fee
+	Total cost-0
+
+	//pay bill//
+		account number
+		phone Number
+		IFSC code
+			pay bill
+		
+	 
+	
+
+4) Appointment Hisory
+	
+
+5) (static)--> Mediciene Facality(List of medicines using images or button with payments)
+	in their add or remove quantity of medicines
+	
+	after select medicines (message:--your amount is added in the bill !!!)
+
+6)  DEPARTMENTS & SERVICES
+	provide the information of doctor/ 
+
+
+
+
+static
+//facilities//
+//footer//
+
+id
+bill

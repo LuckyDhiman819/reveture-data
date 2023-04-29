@@ -1,0 +1,9 @@
+package com.revature.training.model;
+
+public class Employee {
+	
+	private String emolpyeeId;
+	private String employeeName;
+	private String salary;
+
+}

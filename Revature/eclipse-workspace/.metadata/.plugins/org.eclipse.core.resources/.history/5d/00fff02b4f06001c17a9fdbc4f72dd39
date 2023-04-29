@@ -1,0 +1,26 @@
+package com.reature.ems.aspect;
+
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
+
+@Aspect
+@Component
+public class LoggingAspect {
+	
+	@Pointcut("execution(* com.reature.ems.dao.Account+.withdraw(..))")
+	public void func(){}
+	
+	
+	@Before("func()")
+	public void log1() {
+		System.out.println("#### log1 called");
+	}
+	
+	@After("func()")
+	public void log2() {
+		System.out.println("#### transaction successfully completed");
+	}
+}

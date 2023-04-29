@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="E:\Revature\eclipse-workspace\Demo_New"/>
+			<item value="E:\Revature\eclipse-workspace"/>
+			<item value="E:\Revature\eclipse-workspace\Spring_Practice_Project_Anotation\src\main\java\com\revature\ems\configuration\AppConfig.java"/>
+			<item value="E:\Revature\eclipse-workspace\Servelet-Product-App"/>
+			<item value="E:\Revature\eclipse-workspace\ProductManegmentSystem\src\com\revature\pms\dao\ProductDAOImplimetTest.java"/>
+			<item value="E:\Revature\eclipse-workspace\Assement-1\src\material\Accessories.java"/>
+			<item value="E:\Revature\eclipse-workspace\PMS"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="internal"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+			<item value="com.Demo_Project"/>
+			<item value="com"/>
+			<item value="com.demo"/>
+			<item value="com.PROJECT_1_UI_BANKING_APP"/>
+			<item value="com.revature.servlet"/>
+		</list>
+		<list key="groupId">
+			<item value="com"/>
+			<item value="com.revature.servlet"/>
+		</list>
+		<list key="artifactId">
+			<item value="Demo_Project"/>
+			<item value="Demo_New"/>
+			<item value="git-jenkins-docker-demo"/>
+			<item value="Spring_MVC_ProductAPP"/>
+			<item value="UI_BANKING_APP_PROJECT_1"/>
+			<item value="PROJECT_1_UI_BANKING_APP"/>
+			<item value="Spring_Practice_Project"/>
+			<item value="Servlet-Demo-Project"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="E:\Revature\Final Project 3\HMS_spring_admin-master"/>
+			<item value="E:\Revature\Final Project 3\Backend\HMS_spring_admin"/>
+			<item value="E:\Revature\eclipse-workspace\Project3_CustomerBackend-main"/>
+			<item value="E:\Revature\eclipse-workspace\Revature-Project2-final"/>
+			<item value="E:\Revature\eclipse-workspace\Revature-Project2"/>
+			<item value="E:\Revature\eclipse-workspace\SpringFormValidation"/>
+			<item value="E:\Revature\eclipse-workspace\spring-boot-revature-mvc"/>
+			<item value="E:\Revature\eclipse-workspace\spring-boot-revature-cart-app"/>
+			<item value="E:\Revature\AngularWork\alstrom-angular-spring-complete-version2\spring-boot-revature-product-app\spring-boot-revature-product-app"/>
+			<item value="E:\Revature\eclipse-workspace\spring-mvc-all-annotation"/>
+			<item value="E:\Revature\zip file\Project-1-UI-Bank_APP"/>
+			<item value="E:\Revature\eclipse-workspace\InsightBankingApp_Web-master"/>
+			<item value="E:\Revature\eclipse-workspace\InsightBankingApp-master"/>
+			<item value="E:\Revature\eclipse-workspace\Banking.Operation.UI"/>
+			<item value="E:\Revature\eclipse-workspace\ProjectOneDemo"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="ProductManegmentSystem"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="ProductManegmentSystem"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item key="width" value="480"/>
+		<item key="height" value="531"/>
+		<item key="x" value="443"/>
+		<item key="y" value="10"/>
+	</section>
+	<section name="MavenModuleWizardParentPage">
+		<list key="moduleName">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

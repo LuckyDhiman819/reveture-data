@@ -1,0 +1,34 @@
+package com;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.reature.ems.model.Email;
+import com.reature.ems.model.Employee;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.java);
+    	
+    	Employee emp = (Employee) context.getBean("emp");
+    	Email email = (Email) context.getBean("email");
+    	
+    	email.setTo("luckydhiman@gmai.com");
+    	email.setFrom("lucky@gmai.com");
+    	
+    	emp.setEmail(email);
+    	emp.setEmpId(10);
+    	emp.setEmpName("Lucky");
+    	emp.setSalary(50000);
+    	
+    	System.out.println(emp);
+        
+    }
+}
